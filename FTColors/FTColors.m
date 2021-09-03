@@ -122,8 +122,8 @@
     CGFloat approximateWidth = [NSTextField labelWithString:string].intrinsicContentSize.width;
 
     CGFloat kCollectionViewItemViewHeightHeight = 20;
-
-    return NSMakeSize(approximateWidth+20,
+    CGFloat kCollecitonViewItemVerticalPadding = 20;
+    return NSMakeSize(approximateWidth + kCollecitonViewItemVerticalPadding,
                       kCollectionViewItemViewHeightHeight);
 }
 
