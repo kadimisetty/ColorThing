@@ -13,6 +13,7 @@
 		10FD4C2426E2417D0004A31E /* GlyphsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FD4C2326E2417D0004A31E /* GlyphsCore.framework */; };
 		10FD4C2626E2417D0004A31E /* FTColors-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */; };
 		10FD4C7826E253190004A31E /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C7726E253190004A31E /* Utils.m */; };
+		10FD4C7C26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C7B26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		10FD4C2726E2417D0004A31E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10FD4C7626E253190004A31E /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		10FD4C7726E253190004A31E /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		10FD4C7A26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftAlignedCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		10FD4C7B26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftAlignedCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,8 @@
 				10FD4C2726E2417D0004A31E /* Info.plist */,
 				10FD4C7626E253190004A31E /* Utils.h */,
 				10FD4C7726E253190004A31E /* Utils.m */,
+				10FD4C7A26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.h */,
+				10FD4C7B26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m */,
 			);
 			path = FTColors;
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			files = (
 				10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */,
 				10FD4C7826E253190004A31E /* Utils.m in Sources */,
+				10FD4C7C26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
