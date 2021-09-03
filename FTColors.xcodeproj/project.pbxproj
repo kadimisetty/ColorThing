@@ -12,6 +12,7 @@
 		10FD4C2226E2417D0004A31E /* FTColorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2026E2417D0004A31E /* FTColorsView.xib */; };
 		10FD4C2426E2417D0004A31E /* GlyphsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FD4C2326E2417D0004A31E /* GlyphsCore.framework */; };
 		10FD4C2626E2417D0004A31E /* FTColors-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */; };
+		10FD4C7826E253190004A31E /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C7726E253190004A31E /* Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		10FD4C2326E2417D0004A31E /* GlyphsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GlyphsCore.framework; path = "/Applications/Glyphs 3.app/Contents/Frameworks/GlyphsCore.framework"; sourceTree = "<absolute>"; };
 		10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTColors-Prefix.pch"; sourceTree = "<group>"; };
 		10FD4C2726E2417D0004A31E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10FD4C7626E253190004A31E /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		10FD4C7726E253190004A31E /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				10FD4C2326E2417D0004A31E /* GlyphsCore.framework */,
 				10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */,
 				10FD4C2726E2417D0004A31E /* Info.plist */,
+				10FD4C7626E253190004A31E /* Utils.h */,
+				10FD4C7726E253190004A31E /* Utils.m */,
 			);
 			path = FTColors;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */,
+				10FD4C7826E253190004A31E /* Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

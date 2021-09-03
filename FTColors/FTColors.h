@@ -9,7 +9,13 @@
 #import <Cocoa/Cocoa.h>
 #import <GlyphsCore/GlyphsPaletteProtocol.h>
 
-@interface FTColors : NSViewController <GlyphsPalette>
+@interface FTColors : NSViewController <
+GlyphsPalette>
+//NSCollectionViewDelegate,
+//NSCollectionViewDataSource,
+//NSCollectionViewDelegateFlowLayout
 
+
+@property (weak) IBOutlet NSCollectionView *collectionView;
 
 @end
