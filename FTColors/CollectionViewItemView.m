@@ -14,6 +14,7 @@
 }
 
 // MARK: ATTRIBUTES
+
 @synthesize name;
 
 - (void)setName:(NSString *)newName {
@@ -21,11 +22,12 @@
 }
 
 // MARK: LAYOUT
+
 - (instancetype)initWithFrame:(NSRect)frame
 {
 	self = [super initWithFrame:frame];
 	if (self) {
-        // container view
+		// container view
 		_containerView =
 			[[NSView alloc] initWithFrame:frame];
 		_containerView.translatesAutoresizingMaskIntoConstraints = NO;

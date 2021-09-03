@@ -10,10 +10,10 @@
 #import <GlyphsCore/GlyphsPaletteProtocol.h>
 
 @interface FTColors : NSViewController <
-GlyphsPalette>
-//NSCollectionViewDelegate,
-//NSCollectionViewDataSource,
-//NSCollectionViewDelegateFlowLayout
+GlyphsPalette,
+NSCollectionViewDelegate,
+NSCollectionViewDataSource,
+NSCollectionViewDelegateFlowLayout>
 
 
 @property (weak) IBOutlet NSCollectionView *collectionView;

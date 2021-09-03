@@ -5,7 +5,7 @@
 //  Created by Sri Krishna Kadimisetty on 9/3/21.
 //
 
-#import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
