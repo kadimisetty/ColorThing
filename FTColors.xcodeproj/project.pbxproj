@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10FD4C1B26E2417D0004A31E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FD4C1A26E2417D0004A31E /* Cocoa.framework */; };
+		10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C1E26E2417D0004A31E /* FTColors.m */; };
+		10FD4C2226E2417D0004A31E /* FTColorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2026E2417D0004A31E /* FTColorsView.xib */; };
+		10FD4C2426E2417D0004A31E /* GlyphsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FD4C2326E2417D0004A31E /* GlyphsCore.framework */; };
+		10FD4C2626E2417D0004A31E /* FTColors-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10FD4C1726E2417D0004A31E /* FTColors.glyphsPalette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTColors.glyphsPalette; sourceTree = BUILT_PRODUCTS_DIR; };
+		10FD4C1A26E2417D0004A31E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		10FD4C1D26E2417D0004A31E /* FTColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTColors.h; sourceTree = "<group>"; };
+		10FD4C1E26E2417D0004A31E /* FTColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTColors.m; sourceTree = "<group>"; };
+		10FD4C2126E2417D0004A31E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FTColorsView.xib; sourceTree = "<group>"; };
+		10FD4C2326E2417D0004A31E /* GlyphsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GlyphsCore.framework; path = "/Applications/Glyphs 3.app/Contents/Frameworks/GlyphsCore.framework"; sourceTree = "<absolute>"; };
+		10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTColors-Prefix.pch"; sourceTree = "<group>"; };
+		10FD4C2726E2417D0004A31E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10FD4C1426E2417D0004A31E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10FD4C2426E2417D0004A31E /* GlyphsCore.framework in Frameworks */,
+				10FD4C1B26E2417D0004A31E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10FD4C0E26E2417D0004A31E = {
+			isa = PBXGroup;
+			children = (
+				10FD4C1C26E2417D0004A31E /* FTColors */,
+				10FD4C1926E2417D0004A31E /* Frameworks */,
+				10FD4C1826E2417D0004A31E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10FD4C1826E2417D0004A31E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10FD4C1726E2417D0004A31E /* FTColors.glyphsPalette */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10FD4C1926E2417D0004A31E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10FD4C1A26E2417D0004A31E /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10FD4C1C26E2417D0004A31E /* FTColors */ = {
+			isa = PBXGroup;
+			children = (
+				10FD4C1D26E2417D0004A31E /* FTColors.h */,
+				10FD4C1E26E2417D0004A31E /* FTColors.m */,
+				10FD4C2026E2417D0004A31E /* FTColorsView.xib */,
+				10FD4C2326E2417D0004A31E /* GlyphsCore.framework */,
+				10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */,
+				10FD4C2726E2417D0004A31E /* Info.plist */,
+			);
+			path = FTColors;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10FD4C1626E2417D0004A31E /* FTColors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10FD4C2A26E2417D0004A31E /* Build configuration list for PBXNativeTarget "FTColors" */;
+			buildPhases = (
+				10FD4C1326E2417D0004A31E /* Sources */,
+				10FD4C1426E2417D0004A31E /* Frameworks */,
+				10FD4C1526E2417D0004A31E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTColors;
+			productName = FTColors;
+			productReference = 10FD4C1726E2417D0004A31E /* FTColors.glyphsPalette */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10FD4C0F26E2417D0004A31E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					10FD4C1626E2417D0004A31E = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 10FD4C1226E2417D0004A31E /* Build configuration list for PBXProject "FTColors" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10FD4C0E26E2417D0004A31E;
+			productRefGroup = 10FD4C1826E2417D0004A31E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10FD4C1626E2417D0004A31E /* FTColors */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10FD4C1526E2417D0004A31E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10FD4C2226E2417D0004A31E /* FTColorsView.xib in Resources */,
+				10FD4C2626E2417D0004A31E /* FTColors-Prefix.pch in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10FD4C1326E2417D0004A31E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		10FD4C2026E2417D0004A31E /* FTColorsView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10FD4C2126E2417D0004A31E /* en */,
+			);
+			name = FTColorsView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		10FD4C2826E2417D0004A31E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		10FD4C2926E2417D0004A31E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		10FD4C2B26E2417D0004A31E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEVELOPMENT_TEAM = "";
+				DSTROOT = "$(USER_LIBRARY_DIR)/Application Support/Glyphs 3/Plugins";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_APPS_DIR)/Glyphs 3.app/Contents/Frameworks\"";
+				GCC_PREFIX_HEADER = "FTColors/FTColors-Prefix.pch";
+				INFOPLIST_FILE = FTColors/Info.plist;
+				INSTALL_PATH = /;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kadimisetty.FTColors;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = glyphsPalette;
+			};
+			name = Debug;
+		};
+		10FD4C2C26E2417D0004A31E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_APPS_DIR)/Glyphs 3.app/Contents/Frameworks\"";
+				GCC_PREFIX_HEADER = "FTColors/FTColors-Prefix.pch";
+				INFOPLIST_FILE = FTColors/Info.plist;
+				INSTALL_PATH = /;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kadimisetty.FTColors;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = glyphsPalette;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10FD4C1226E2417D0004A31E /* Build configuration list for PBXProject "FTColors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10FD4C2826E2417D0004A31E /* Debug */,
+				10FD4C2926E2417D0004A31E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10FD4C2A26E2417D0004A31E /* Build configuration list for PBXNativeTarget "FTColors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10FD4C2B26E2417D0004A31E /* Debug */,
+				10FD4C2C26E2417D0004A31E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10FD4C0F26E2417D0004A31E /* Project object */;
+}
