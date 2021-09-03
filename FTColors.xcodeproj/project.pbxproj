@@ -14,6 +14,7 @@
 		10FD4C2626E2417D0004A31E /* FTColors-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */; };
 		10FD4C7826E253190004A31E /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C7726E253190004A31E /* Utils.m */; };
 		10FD4C7C26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C7B26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m */; };
+		10FD4C8026E25BCB0004A31E /* CollectionViewItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C7F26E25BCB0004A31E /* CollectionViewItemView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		10FD4C7726E253190004A31E /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		10FD4C7A26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftAlignedCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		10FD4C7B26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftAlignedCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		10FD4C7E26E25BCB0004A31E /* CollectionViewItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewItemView.h; sourceTree = "<group>"; };
+		10FD4C7F26E25BCB0004A31E /* CollectionViewItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewItemView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 				10FD4C7726E253190004A31E /* Utils.m */,
 				10FD4C7A26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.h */,
 				10FD4C7B26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m */,
+				10FD4C7E26E25BCB0004A31E /* CollectionViewItemView.h */,
+				10FD4C7F26E25BCB0004A31E /* CollectionViewItemView.m */,
 			);
 			path = FTColors;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10FD4C8026E25BCB0004A31E /* CollectionViewItemView.m in Sources */,
 				10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */,
 				10FD4C7826E253190004A31E /* Utils.m in Sources */,
 				10FD4C7C26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m in Sources */,
