@@ -17,14 +17,49 @@
             <rect key="frame" x="0.0" y="0.0" width="170" height="130"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hb-Mg-BQP">
-                    <rect key="frame" x="0.0" y="0.0" width="170" height="130"/>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="pFV-Yh-LJw" userLabel="ExtraButtons">
+                    <rect key="frame" x="0.0" y="0.0" width="170" height="34"/>
+                    <subviews>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="l3L-Ap-5CH">
+                            <rect key="frame" x="12" y="10.5" width="15.5" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="14.5" id="bqJ-xJ-paG"/>
+                            </constraints>
+                            <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="iS3-Yk-9wy">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="refreshData:" target="-2" id="3po-NW-0A0"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CHK-pD-dNF">
+                            <rect key="frame" x="144" y="10" width="14" height="14"/>
+                            <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSSmartBadgeTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="2Js-cW-w0s">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="openPreferences:" target="-2" id="a8b-ZZ-yff"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="l3L-Ap-5CH" firstAttribute="centerY" secondItem="CHK-pD-dNF" secondAttribute="centerY" id="BZy-kt-dHD"/>
+                        <constraint firstAttribute="trailing" secondItem="CHK-pD-dNF" secondAttribute="trailing" constant="12" id="NMe-J8-NS4"/>
+                        <constraint firstItem="l3L-Ap-5CH" firstAttribute="centerY" secondItem="pFV-Yh-LJw" secondAttribute="centerY" id="QeT-cI-7bp"/>
+                        <constraint firstItem="l3L-Ap-5CH" firstAttribute="leading" secondItem="pFV-Yh-LJw" secondAttribute="leading" constant="12" id="tEv-oQ-dKV"/>
+                        <constraint firstAttribute="height" constant="34" id="w3T-iZ-ztM"/>
+                    </constraints>
+                </customView>
+                <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hb-Mg-BQP">
+                    <rect key="frame" x="0.0" y="34" width="170" height="96"/>
                     <clipView key="contentView" id="mFv-cu-tac">
-                        <rect key="frame" x="1" y="1" width="168" height="128"/>
+                        <rect key="frame" x="1" y="1" width="168" height="94"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView id="YrB-KJ-ZzA">
-                                <rect key="frame" x="0.0" y="0.0" width="168" height="158"/>
+                                <rect key="frame" x="0.0" y="0.0" width="168" height="94"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="TG4-d1-pMh">
                                     <size key="itemSize" width="50" height="50"/>
@@ -34,22 +69,29 @@
                         </subviews>
                     </clipView>
                     <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="XCg-g4-rhb">
-                        <rect key="frame" x="1" y="143" width="168" height="16"/>
+                        <rect key="frame" x="-100" y="-100" width="168" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="RQZ-9t-ETy">
-                        <rect key="frame" x="153" y="1" width="16" height="128"/>
+                    <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="RQZ-9t-ETy">
+                        <rect key="frame" x="153" y="1" width="16" height="73"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
             </subviews>
             <constraints>
+                <constraint firstItem="pFV-Yh-LJw" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="3Oj-Q3-hLf"/>
                 <constraint firstAttribute="trailing" secondItem="5Hb-Mg-BQP" secondAttribute="trailing" id="E07-o6-3lg"/>
                 <constraint firstItem="5Hb-Mg-BQP" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="IL7-2T-BtW"/>
-                <constraint firstAttribute="bottom" secondItem="5Hb-Mg-BQP" secondAttribute="bottom" id="QWP-2Z-fbk"/>
+                <constraint firstAttribute="bottom" secondItem="pFV-Yh-LJw" secondAttribute="bottom" id="WCt-Aj-MBI"/>
+                <constraint firstItem="pFV-Yh-LJw" firstAttribute="top" secondItem="5Hb-Mg-BQP" secondAttribute="bottom" id="eVG-qV-LsR"/>
                 <constraint firstItem="5Hb-Mg-BQP" firstAttribute="top" secondItem="1" secondAttribute="top" id="uJo-gG-hN1"/>
+                <constraint firstAttribute="trailing" secondItem="pFV-Yh-LJw" secondAttribute="trailing" id="wJ2-ML-2RF"/>
             </constraints>
             <point key="canvasLocation" x="-16" y="179"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSRefreshTemplate" width="14" height="16"/>
+        <image name="NSSmartBadgeTemplate" width="14" height="14"/>
+    </resources>
 </document>

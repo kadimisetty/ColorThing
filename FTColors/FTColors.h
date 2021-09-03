@@ -18,4 +18,7 @@ NSCollectionViewDelegateFlowLayout>
 
 @property (weak) IBOutlet NSCollectionView *collectionView;
 
+- (IBAction)refreshData:(id)sender;
+- (IBAction)openPreferences:(id)sender;
+
 @end

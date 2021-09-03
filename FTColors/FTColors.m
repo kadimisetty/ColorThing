@@ -23,6 +23,10 @@
     return (NSUserInterfaceItemIdentifier) @"collectionViewItemIdentifier";
 }
 
+- (NSUserInterfaceItemIdentifier)collectionViewHeaderIdentifier {
+    return (NSUserInterfaceItemIdentifier) @"collectionViewHeaderIdentifier";
+}
+
 // MARK: GLYPHS
 - (NSUInteger)interfaceVersion {
     // Distinguishes the API verison the plugin was built for. Return 1.
@@ -127,5 +131,11 @@
                       kCollectionViewItemViewHeightHeight);
 }
 
+// MARK: Actions
+- (IBAction)openPreferences:(id)sender {
+}
+
+- (IBAction)refreshData:(id)sender {
+}
 
 @end
