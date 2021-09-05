@@ -8,6 +8,8 @@
         <customObject id="-2" userLabel="File's Owner" customClass="FTColors">
             <connections>
                 <outlet property="collectionView" destination="YrB-KJ-ZzA" id="cgU-Fi-x94"/>
+                <outlet property="openPreferencesButton" destination="CHK-pD-dNF" id="qCi-zd-hCQ"/>
+                <outlet property="refreshDataButton" destination="l3L-Ap-5CH" id="IPg-Rr-J4L"/>
                 <outlet property="view" destination="1" id="inQ-tR-d0j"/>
             </connections>
         </customObject>
@@ -53,13 +55,13 @@
                     </constraints>
                 </customView>
                 <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Hb-Mg-BQP">
-                    <rect key="frame" x="0.0" y="34" width="170" height="96"/>
+                    <rect key="frame" x="4" y="34" width="162" height="90"/>
                     <clipView key="contentView" id="mFv-cu-tac">
-                        <rect key="frame" x="1" y="1" width="168" height="94"/>
+                        <rect key="frame" x="1" y="1" width="160" height="88"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView id="YrB-KJ-ZzA">
-                                <rect key="frame" x="0.0" y="0.0" width="168" height="94"/>
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="88"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="TG4-d1-pMh">
                                     <size key="itemSize" width="50" height="50"/>
@@ -73,18 +75,18 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="RQZ-9t-ETy">
-                        <rect key="frame" x="153" y="1" width="16" height="73"/>
+                        <rect key="frame" x="137" y="1" width="16" height="88"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
             </subviews>
             <constraints>
                 <constraint firstItem="pFV-Yh-LJw" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="3Oj-Q3-hLf"/>
-                <constraint firstAttribute="trailing" secondItem="5Hb-Mg-BQP" secondAttribute="trailing" id="E07-o6-3lg"/>
-                <constraint firstItem="5Hb-Mg-BQP" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="IL7-2T-BtW"/>
+                <constraint firstAttribute="trailing" secondItem="5Hb-Mg-BQP" secondAttribute="trailing" constant="4" id="E07-o6-3lg"/>
+                <constraint firstItem="5Hb-Mg-BQP" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="4" id="IL7-2T-BtW"/>
                 <constraint firstAttribute="bottom" secondItem="pFV-Yh-LJw" secondAttribute="bottom" id="WCt-Aj-MBI"/>
                 <constraint firstItem="pFV-Yh-LJw" firstAttribute="top" secondItem="5Hb-Mg-BQP" secondAttribute="bottom" id="eVG-qV-LsR"/>
-                <constraint firstItem="5Hb-Mg-BQP" firstAttribute="top" secondItem="1" secondAttribute="top" id="uJo-gG-hN1"/>
+                <constraint firstItem="5Hb-Mg-BQP" firstAttribute="top" secondItem="1" secondAttribute="top" constant="6" id="uJo-gG-hN1"/>
                 <constraint firstAttribute="trailing" secondItem="pFV-Yh-LJw" secondAttribute="trailing" id="wJ2-ML-2RF"/>
             </constraints>
             <point key="canvasLocation" x="-16" y="179"/>

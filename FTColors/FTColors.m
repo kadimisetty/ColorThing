@@ -28,6 +28,15 @@
 	return (NSUserInterfaceItemIdentifier) @"collectionViewItemIdentifier";
 }
 
+- (NSArray *)sortedColorLabelArray {
+	return [[self->colorLabels allValues]
+	        sortedArrayUsingComparator: ^NSComparisonResult
+	                (ColorLabel *cl1, ColorLabel *cl2) {
+	                return [[NSNumber numberWithInteger:cl1.colorLabelIndexIntegerValue]
+	                        compare:
+	                        [NSNumber numberWithInteger:cl2.colorLabelIndexIntegerValue]];
+		}];
+}
 
 // MARK: GLYPHS
 - (NSUInteger)interfaceVersion {
@@ -66,23 +75,39 @@
 }
 
 
-// MARK: LIFECYCLE
+// MARK: LIFECYCLE{
+//- (instancetype)initWithNibName:(NSNibName)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//
+//
+//    return self;
+//}
+
 - (id) init {
 	self = [super initWithNibName:@"FTColorsView"
 	        bundle:[NSBundle bundleForClass:[self class]]];
-
-	self->colorLabels = [[NSMutableDictionary alloc] init];
-
 	return self;
 }
 
+//- (void)viewWillAppear {
+//    [self.collectionView reloadData];
+//}
+//
+//- (void)viewDidAppear {
+//    [self.collectionView reloadData];
+//}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
-
+    
+    self->colorLabels = [[NSMutableDictionary alloc] init];
+//    [self flushColorLabels];
+    
 	// COLLECTIONVIEW
-	self.collectionView.delegate = self;
-	self.collectionView.dataSource = self;
-
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    self.collectionView.backgroundColors = @[NSColor.clearColor];
+    
 	// Register collection view items
 	[self.collectionView
 	 registerClass:[CollectionViewItem self]
@@ -94,9 +119,11 @@
 	leftAlignedLayout.minimumLineSpacing = 2;
 	leftAlignedLayout.minimumInteritemSpacing = 2;
 	self.collectionView.collectionViewLayout = leftAlignedLayout;
-
-    [self flushColorLabels];
-    [self populateColorLabelsFromCurrentDocument];
+    
+    // Reload color labels after 2 second delay
+    [self performSelector:@selector(flushColorLabels)
+               withObject:nil
+               afterDelay:2.0f];
 }
 
 // MARK: CollectionViewDelegate
@@ -110,12 +137,10 @@
 	                            forIndexPath:indexPath];
 
 	// CONFIGURE ITEM
-	// TODO: Read from a sorted version of self->colorLabels
-    ColorLabel* cl = [[self->colorLabels allValues] objectAtIndex:indexPath.item];
-    NSInteger count = cl.allGlyphsCount;
+	ColorLabel* cl = [[self sortedColorLabelArray] objectAtIndex:indexPath.item];
 
-	item.name = [NSString stringWithFormat:@"%ld", (long)count];
-    item.nSColorValue = cl.nSColorValue;
+	item.name = [NSString stringWithFormat:@"%ld", (long)cl.allGlyphsCount];
+	item.nSColorValue = cl.nSColorValue;
 
 	// RETURN ITEM
 	return item;
@@ -131,8 +156,8 @@
 - (NSSize)collectionView:(NSCollectionView *)collectionView
         layout:(NSCollectionViewLayout *)collectionViewLayout
         sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-        
-    CGFloat kCollectionViewItemViewHeightHeight = 18;
+
+	CGFloat kCollectionViewItemViewHeightHeight = 18;
 
 	return NSMakeSize(40, kCollectionViewItemViewHeightHeight);
 
@@ -156,38 +181,43 @@
 }
 
 - (IBAction)refreshData:(id)sender {
-    [self flushColorLabels];
-    [self populateColorLabelsFromCurrentDocument];
+	[self refreshColorLabelsData];
 }
 
 // MARK: HELPERS
+- (void)refreshColorLabelsData {
+    [self flushColorLabels];
+}
 
 - (void)flushColorLabels {
 	[self->colorLabels removeAllObjects];
-	[self.collectionView reloadData];
+    [self populateColorLabelsFromCurrentDocument];
+}
+
+- (void)populateColorLabelsFromCurrentDocumentWithoutReloadingCollectionView {
+    for (GSGlyph* glyph in self.windowController.documentFont.allGlyphs) {
+        NSInteger colorIndexInteger = glyph.colorIndex;
+        NSNumber* colorIndexNumber = [NSNumber numberWithInteger:colorIndexInteger];
+        
+        if ([self->colorLabels objectForKey: colorIndexNumber]) {
+            // self->colorLabels contains this ColorLabel
+            ColorLabel* colorLabel = [self->colorLabels objectForKey: colorIndexNumber];
+            [colorLabel.allGlyphs addObject:glyph];
+        } else {
+            // self->colorLabels does not contain this ColorLabel. Create one.
+            ColorLabel* colorLabel = [[ColorLabel alloc] init];
+            colorLabel.colorLabelIndexIntegerValue = colorIndexInteger;
+            colorLabel.allGlyphs = [[NSMutableArray alloc] initWithArray:@[glyph]];
+            colorLabel.activeGlyphIndex = 0;
+            
+            // Insert into self->colorLabels
+            [self->colorLabels setObject:colorLabel forKey:colorIndexNumber];
+        }
+    }
 }
 
 - (void)populateColorLabelsFromCurrentDocument {
-	for (GSGlyph* glyph in self.windowController.documentFont.allGlyphs) {
-		NSInteger colorIndexInteger = glyph.colorIndex;
-		NSNumber* colorIndexNumber = [NSNumber numberWithInteger:colorIndexInteger];
-
-		if ([self->colorLabels objectForKey: colorIndexNumber]) {
-			// self->colorLabels contains this ColorLabel
-			ColorLabel* colorLabel = [self->colorLabels objectForKey: colorIndexNumber];
-			[colorLabel.allGlyphs addObject:glyph];
-		} else {
-			// self->colorLabels does not contain this ColorLabel. Create one.
-			ColorLabel* colorLabel = [[ColorLabel alloc] init];
-			colorLabel.colorLabelIndexIntegerValue = colorIndexInteger;
-			colorLabel.allGlyphs = [[NSMutableArray alloc] initWithArray:@[glyph]];
-			colorLabel.activeGlyphIndex = 0;
-
-			// Insert into self->colorLabels
-			[self->colorLabels setObject:colorLabel forKey:colorIndexNumber];
-		}
-	}
-
+    [self populateColorLabelsFromCurrentDocumentWithoutReloadingCollectionView];
 	[self.collectionView reloadData];
 }
 
