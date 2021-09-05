@@ -82,9 +82,6 @@
 	// COLLECTIONVIEW
 	self.collectionView.delegate = self;
 	self.collectionView.dataSource = self;
-	self.collectionView.backgroundColors = @[
-		[NSColor yellowColor],
-		[NSColor greenColor]];
 
 	// Register collection view items
 	[self.collectionView
@@ -98,11 +95,12 @@
 	leftAlignedLayout.minimumInteritemSpacing = 2;
 	self.collectionView.collectionViewLayout = leftAlignedLayout;
 
-//    [self->colorLabels remove
-	[self populateColorLabelsFromCurrentDocument];
+    [self flushColorLabels];
+    [self populateColorLabelsFromCurrentDocument];
 }
 
 // MARK: CollectionViewDelegate
+
 - (nonnull NSCollectionViewItem *)collectionView:(nonnull NSCollectionView *)collectionView
         itemForRepresentedObjectAtIndexPath:(nonnull NSIndexPath *)indexPath {
 
@@ -112,11 +110,12 @@
 	                            forIndexPath:indexPath];
 
 	// CONFIGURE ITEM
-	// TODO: Make sorted
-	NSInteger count =
-		[[self->colorLabels allValues] objectAtIndex:indexPath.item].allGlyphsCount;
+	// TODO: Read from a sorted version of self->colorLabels
+    ColorLabel* cl = [[self->colorLabels allValues] objectAtIndex:indexPath.item];
+    NSInteger count = cl.allGlyphsCount;
 
 	item.name = [NSString stringWithFormat:@"%ld", (long)count];
+    item.nSColorValue = cl.nSColorValue;
 
 	// RETURN ITEM
 	return item;
@@ -132,8 +131,10 @@
 - (NSSize)collectionView:(NSCollectionView *)collectionView
         layout:(NSCollectionViewLayout *)collectionViewLayout
         sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+        
+    CGFloat kCollectionViewItemViewHeightHeight = 18;
 
-	return NSMakeSize(40, 20);
+	return NSMakeSize(40, kCollectionViewItemViewHeightHeight);
 
 //	// TODO: Use displayed string's attributes
 //
@@ -142,7 +143,6 @@
 //
 //	CGFloat approximateWidth = [NSTextField labelWithString:string].intrinsicContentSize.width;
 //
-//	CGFloat kCollectionViewItemViewHeightHeight = 20;
 //	CGFloat kCollecitonViewItemVerticalPadding = 20;
 //	return NSMakeSize(approximateWidth + kCollecitonViewItemVerticalPadding,
 //	                  kCollectionViewItemViewHeightHeight);
@@ -156,9 +156,8 @@
 }
 
 - (IBAction)refreshData:(id)sender {
-	[self showModalAlert: [NSString stringWithFormat:
-	                       @"number of red glyphs:%ld",
-	                       (long)[self numberOfglyphsInRedColor]]];
+    [self flushColorLabels];
+    [self populateColorLabelsFromCurrentDocument];
 }
 
 // MARK: HELPERS
@@ -190,21 +189,6 @@
 	}
 
 	[self.collectionView reloadData];
-}
-
-- (NSUInteger)numberOfglyphsInRedColor {
-	[self flushColorLabels];
-	[self populateColorLabelsFromCurrentDocument];
-
-	ColorLabel* redColorLabel =
-		[self->colorLabels objectForKey:[NSNumber numberWithInteger:kColorLabelColorRed]];
-	if (redColorLabel) {
-		// not nil
-		return redColorLabel.allGlyphsCount;
-	} else {
-		// nil
-		return 0;
-	}
 }
 
 - (void)showModalAlert:(NSString *)alertInformativeText {

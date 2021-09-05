@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CollectionViewItem : NSCollectionViewItem
 
 @property (nonatomic) NSString* name;
+@property (nonatomic) NSColor* nSColorValue;
+
 
 @end
 

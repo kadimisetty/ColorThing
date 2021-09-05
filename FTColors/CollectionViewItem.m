@@ -14,9 +14,14 @@
 
 // MARK: ATTRIBUTES
 @synthesize name;
+@synthesize nSColorValue;
 
 - (void) setName:(NSString *)newValue {
 	_collectionViewItemView.name = newValue;
+}
+
+- (void)setNSColorValue:(NSColor *)newValue {
+    _collectionViewItemView.nSColorValue = newValue;
 }
 
 // MARK: LIFECYCLE

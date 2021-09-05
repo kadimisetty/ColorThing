@@ -39,7 +39,7 @@ typedef NS_ENUM(NSInteger, ColorLabelIndex) {
 - (NSUInteger)glyphsBeforeActiveGlyphCount;
 - (NSUInteger)glyphsAfterActiveGlyphCount;
 
-- (NSColor*) nsColorValue;
+- (NSColor*) nSColorValue;
 
 - (NSString*) colorNameStringValue;
 

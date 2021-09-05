@@ -16,9 +16,15 @@
 // MARK: ATTRIBUTES
 
 @synthesize name;
+@synthesize nSColorValue;
 
 - (void)setName:(NSString *)newName {
 	[_nameLabel setStringValue:newName];
+}
+
+- (void)setNSColorValue:(NSColor *)newValue {
+//    _nameLabel.backgroundColor = newValue;
+    _containerView.layer.backgroundColor = newValue.CGColor;
 }
 
 // MARK: LAYOUT
@@ -32,8 +38,7 @@
 			[[NSView alloc] initWithFrame:frame];
 		_containerView.translatesAutoresizingMaskIntoConstraints = NO;
 		_containerView.wantsLayer = YES;
-		_containerView.layer.backgroundColor = NSColor.systemTealColor.CGColor;
-		_containerView.layer.cornerRadius = 5;
+		_containerView.layer.cornerRadius = 9;
 
 		[self addSubview:_containerView];
 		[Utils constrainEdgesToSuperViewEdgesForView:
@@ -43,9 +48,9 @@
 		_nameLabel = [[NSTextField alloc]
 		              initWithFrame:CGRectZero];
 		_nameLabel.textColor = [NSColor blackColor];
-		_nameLabel.backgroundColor = [NSColor clearColor];
 		_nameLabel.editable = NO;
-		_nameLabel.bordered = YES;
+		_nameLabel.bordered = NO;
+        _nameLabel.backgroundColor = NSColor.clearColor;
 		_nameLabel.alignment = NSTextAlignmentCenter;
 		_nameLabel.maximumNumberOfLines = 1;
 		_nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
