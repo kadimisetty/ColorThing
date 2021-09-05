@@ -3,3 +3,15 @@
 #else
 #define	GSLog(args...)			// stubbed out
 #endif
+
+// GLYPH IMPORTS
+
+#import <GlyphsCore/GSFont.h>
+#import <GlyphsCore/GSFontMaster.h>
+#import <GlyphsCore/GSGlyph.h>
+#import <GlyphsCore/GSLayer.h>
+#import <GlyphsCore/GSPath.h>
+#import <GlyphsCore/GSElement.h>
+#import <GlyphsCore/GSNode.h>
+#import <GlyphsCore/GlyphsPaletteProtocol.h>
+#import <GlyphsCore/GSWindowControllerProtocol.h>

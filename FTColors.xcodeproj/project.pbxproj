@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10DCD22D26E3EF4800E955BC /* ColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DCD22C26E3EF4800E955BC /* ColorLabel.m */; };
 		10FD4C1B26E2417D0004A31E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FD4C1A26E2417D0004A31E /* Cocoa.framework */; };
 		10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C1E26E2417D0004A31E /* FTColors.m */; };
 		10FD4C2226E2417D0004A31E /* FTColorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2026E2417D0004A31E /* FTColorsView.xib */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10DCD22B26E3EF4800E955BC /* ColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorLabel.h; sourceTree = "<group>"; };
+		10DCD22C26E3EF4800E955BC /* ColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorLabel.m; sourceTree = "<group>"; };
 		10FD4C1726E2417D0004A31E /* FTColors.glyphsPalette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTColors.glyphsPalette; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FD4C1A26E2417D0004A31E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		10FD4C1D26E2417D0004A31E /* FTColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTColors.h; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 			children = (
 				10FD4C1D26E2417D0004A31E /* FTColors.h */,
 				10FD4C1E26E2417D0004A31E /* FTColors.m */,
+				10DCD22B26E3EF4800E955BC /* ColorLabel.h */,
+				10DCD22C26E3EF4800E955BC /* ColorLabel.m */,
 				10FD4C8226E25C850004A31E /* CollectionViewItem.h */,
 				10FD4C8326E25C850004A31E /* CollectionViewItem.m */,
 				10FD4C7E26E25BCB0004A31E /* CollectionViewItemView.h */,
@@ -164,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10DCD22D26E3EF4800E955BC /* ColorLabel.m in Sources */,
 				10FD4C8026E25BCB0004A31E /* CollectionViewItemView.m in Sources */,
 				10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */,
 				10FD4C8426E25C850004A31E /* CollectionViewItem.m in Sources */,

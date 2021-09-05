@@ -7,7 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <GlyphsCore/GlyphsPaletteProtocol.h>
 
 @interface FTColors : NSViewController <
 GlyphsPalette,
