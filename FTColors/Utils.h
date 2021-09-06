@@ -11,8 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Utils : NSObject
 
-+ (void) constrainEdgesToSuperViewEdgesForView: (NSView *) someView;
-+ (void) centerWithinSuperViewForView: (NSView *) someView;
++ (void)constrainEdgesToSuperViewEdgesForView: (NSView *) someView;
++ (void)centerWithinSuperViewForView: (NSView *) someView;
++ (NSFont*)preferredFont;
 
 @end
 

@@ -76,12 +76,6 @@
 
 
 // MARK: LIFECYCLE{
-//- (instancetype)initWithNibName:(NSNibName)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//
-//
-//    return self;
-//}
 
 - (id) init {
 	self = [super initWithNibName:@"FTColorsView"
@@ -89,24 +83,16 @@
 	return self;
 }
 
-//- (void)viewWillAppear {
-//    [self.collectionView reloadData];
-//}
-//
-//- (void)viewDidAppear {
-//    [self.collectionView reloadData];
-//}
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
     
     self->colorLabels = [[NSMutableDictionary alloc] init];
-//    [self flushColorLabels];
     
 	// COLLECTIONVIEW
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    self.collectionView.backgroundColors = @[NSColor.clearColor];
+    self.collectionView.backgroundColors = @[NSColor.clearColor, NSColor.clearColor];
     
 	// Register collection view items
 	[self.collectionView
@@ -121,7 +107,10 @@
 	self.collectionView.collectionViewLayout = leftAlignedLayout;
     
     // Reload color labels after 2 second delay
-    [self performSelector:@selector(flushColorLabels)
+//    [self performSelector:@selector(flushColorLabels)
+//               withObject:nil
+//               afterDelay:2.0f];
+    [self performSelector:@selector(refreshColorLabels)
                withObject:nil
                afterDelay:2.0f];
 }
@@ -156,21 +145,17 @@
 - (NSSize)collectionView:(NSCollectionView *)collectionView
         layout:(NSCollectionViewLayout *)collectionViewLayout
         sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    ColorLabel* colorLabel = [[self sortedColorLabelArray] objectAtIndex:indexPath.item];
+    NSString* clAllGlyphsCountString = [NSString stringWithFormat:@"%ld", (long)colorLabel.allGlyphsCount];
 
-	CGFloat kCollectionViewItemViewHeightHeight = 18;
-
-	return NSMakeSize(40, kCollectionViewItemViewHeightHeight);
-
-//	// TODO: Use displayed string's attributes
-//
-//	NSString* string = self->itemNames[indexPath.item];
-//
-//
-//	CGFloat approximateWidth = [NSTextField labelWithString:string].intrinsicContentSize.width;
-//
-//	CGFloat kCollecitonViewItemVerticalPadding = 20;
-//	return NSMakeSize(approximateWidth + kCollecitonViewItemVerticalPadding,
-//	                  kCollectionViewItemViewHeightHeight);
+    NSTextField* textField = [NSTextField labelWithString:clAllGlyphsCountString];
+    textField.font = [Utils preferredFont];
+    CGFloat approximateWidth = textField.intrinsicContentSize.width;
+          
+    CGFloat kCollectionViewItemViewHeightHeight = 20;
+	CGFloat kCollecitonViewItemVerticalPadding = 16;
+	return NSMakeSize(approximateWidth + kCollecitonViewItemVerticalPadding,
+	                  kCollectionViewItemViewHeightHeight);
 }
 
 
@@ -181,20 +166,17 @@
 }
 
 - (IBAction)refreshData:(id)sender {
-	[self refreshColorLabelsData];
+	[self refreshColorLabels];
 }
 
 // MARK: HELPERS
-- (void)refreshColorLabelsData {
-    [self flushColorLabels];
-}
 
-- (void)flushColorLabels {
+- (void)refreshColorLabels {
 	[self->colorLabels removeAllObjects];
-    [self populateColorLabelsFromCurrentDocument];
+    [self populateColorLabelsFromCurrentDocumentAndReloadCollectionView];
 }
 
-- (void)populateColorLabelsFromCurrentDocumentWithoutReloadingCollectionView {
+- (void)populateColorLabelsFromCurrentDocument {
     for (GSGlyph* glyph in self.windowController.documentFont.allGlyphs) {
         NSInteger colorIndexInteger = glyph.colorIndex;
         NSNumber* colorIndexNumber = [NSNumber numberWithInteger:colorIndexInteger];
@@ -216,8 +198,8 @@
     }
 }
 
-- (void)populateColorLabelsFromCurrentDocument {
-    [self populateColorLabelsFromCurrentDocumentWithoutReloadingCollectionView];
+- (void)populateColorLabelsFromCurrentDocumentAndReloadCollectionView {
+    [self populateColorLabelsFromCurrentDocument];
 	[self.collectionView reloadData];
 }
 

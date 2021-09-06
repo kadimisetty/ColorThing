@@ -92,7 +92,7 @@
 	case 8:
 		// purple
 		// seance
-		return [NSColor colorWithRed:0.969 green:0.473 blue:0.72 alpha:1.0];
+		return [NSColor colorWithRed:0.431 green:0.112 blue:0.669 alpha:1.0];
 		break;
 	case 9:
 		// magenta

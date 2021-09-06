@@ -9,6 +9,10 @@
 #import <Cocoa/Cocoa.h>
 
 @implementation Utils
++ (NSFont *)preferredFont {
+	return [NSFont systemFontOfSize:NSFont.smallSystemFontSize
+	        weight:NSFontWeightBold];
+}
 
 + (void) constrainEdgesToSuperViewEdgesForView: (NSView *) someView {
 	NSView *someViewSuperview = someView.superview;
