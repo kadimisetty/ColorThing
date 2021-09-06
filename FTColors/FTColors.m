@@ -117,6 +117,10 @@
 	 selector:@selector(interfaceDidUpdate)
 	 name: @"GSUpdateInterface"
 	 object:nil];
+    
+    // Set tooltips on buttons
+    self.refreshDataButton.toolTip = @"Refresh Colors Manually";
+    self.openPreferencesButton.toolTip = @"Open Preferences";
 }
 
 - (void)dealloc
