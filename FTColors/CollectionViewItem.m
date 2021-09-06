@@ -13,6 +13,7 @@
 }
 
 // MARK: ATTRIBUTES
+
 @synthesize name;
 @synthesize nSColorValue;
 
@@ -25,6 +26,7 @@
 }
 
 // MARK: LIFECYCLE
+
 - (void)loadView {
 	_collectionViewItemView =
 		[[CollectionViewItemView alloc] initWithFrame:CGRectZero];

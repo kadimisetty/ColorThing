@@ -43,5 +43,10 @@
 	 setActive:YES];
 }
 
++ (void)showModalAlert:(NSString *)informativeText {
+    NSAlert* alert = [[NSAlert alloc] init];
+    alert.informativeText = informativeText;
+    [alert runModal];
+}
 
 @end

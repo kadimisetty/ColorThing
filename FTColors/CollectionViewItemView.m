@@ -9,8 +9,8 @@
 #import "Utils.h"
 
 @implementation CollectionViewItemView {
-	NSTextField* _nameLabel;
-	NSView* _containerView;
+	NSButton* nameButton;
+	NSView* containerView;
 }
 
 // MARK: ATTRIBUTES
@@ -19,12 +19,21 @@
 @synthesize nSColorValue;
 
 - (void)setName:(NSString *)newName {
-	[_nameLabel setStringValue:newName];
+	self->nameButton.attributedTitle =
+		[[NSAttributedString alloc]
+		 initWithString: newName
+		 attributes: [self buttonTextStyleAttributesDict]];
 }
 
 - (void)setNSColorValue:(NSColor *)newValue {
-//    _nameLabel.backgroundColor = newValue;
-	_containerView.layer.backgroundColor = newValue.CGColor;
+	self->containerView.layer.backgroundColor = newValue.CGColor;
+}
+
+- (NSDictionary *)buttonTextStyleAttributesDict {
+    return [NSDictionary dictionaryWithObjectsAndKeys:
+            [Utils preferredFont], NSFontAttributeName,
+            [NSColor blackColor], NSForegroundColorAttributeName,
+            nil];
 }
 
 // MARK: LAYOUT
@@ -33,39 +42,37 @@
 {
 	self = [super initWithFrame:frame];
 	if (self) {
-		// container view
-		_containerView =
-			[[NSView alloc] initWithFrame:frame];
-		_containerView.translatesAutoresizingMaskIntoConstraints = NO;
-		_containerView.wantsLayer = YES;
-		_containerView.layer.cornerRadius = 10;
-        _containerView.layer.borderWidth = 0.4;
-        _containerView.layer.borderColor =
-            [NSColor colorWithWhite:0.4 alpha:1.0].CGColor;
-        
-        
+		self->containerView = [[NSView alloc] initWithFrame:frame];
+		self->containerView.translatesAutoresizingMaskIntoConstraints = NO;
+		self->containerView.wantsLayer = YES;
+		self->containerView.layer.cornerRadius = 4;
+		self->containerView.layer.borderWidth = 0.4;
+		self->containerView.layer.borderColor =
+			[NSColor colorWithWhite:0.4 alpha:1.0].CGColor;
 
-		[self addSubview:_containerView];
+		[self addSubview:self->containerView];
 		[Utils constrainEdgesToSuperViewEdgesForView:
-		 _containerView];
+		 self->containerView];
 
-		// nameLabel
-		_nameLabel = [[NSTextField alloc]
-		              initWithFrame:CGRectZero];
-		_nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
-		_nameLabel.textColor = [NSColor whiteColor];
-		_nameLabel.editable = NO;
-		_nameLabel.bordered = NO;
-		_nameLabel.backgroundColor = NSColor.clearColor;
-		_nameLabel.alignment = NSTextAlignmentCenter;
-		_nameLabel.maximumNumberOfLines = 1;
-		_nameLabel.font = [Utils preferredFont];
+        self->nameButton = [[NSButton alloc] initWithFrame:CGRectZero];
+		self->nameButton.translatesAutoresizingMaskIntoConstraints = NO;
+        // TODO: Fix issue with not showing after clicked.
+		[self->nameButton setButtonType:NSButtonTypeMomentaryLight];
+        [self->nameButton setButtonType:NSButtonTypeMomentaryChange];
+		self->nameButton.alignment = NSTextAlignmentCenter;
+		self->nameButton.bordered = NO;
+		self->nameButton.target = self;
+		self->nameButton.action = @selector(nameButtonClicked);
+		self->nameButton.font = [Utils preferredFont];
 
-		[_containerView addSubview:_nameLabel];
-		[Utils centerWithinSuperViewForView:_nameLabel];
+		[self->containerView addSubview:self->nameButton];
+		[Utils constrainEdgesToSuperViewEdgesForView:self->nameButton];
 	}
 
 	return self;
 }
 
+- (void)nameButtonClicked {
+	[Utils showModalAlert:@"ZOINK!"];
+}
 @end

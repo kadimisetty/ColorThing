@@ -50,7 +50,7 @@
 }
 
 - (NSInteger)maxHeight {
-	return 265;
+    return 140;
 }
 
 - (NSInteger)minHeight {
@@ -107,9 +107,6 @@
 	self.collectionView.collectionViewLayout = leftAlignedLayout;
     
     // Reload color labels after 2 second delay
-//    [self performSelector:@selector(flushColorLabels)
-//               withObject:nil
-//               afterDelay:2.0f];
     [self performSelector:@selector(refreshColorLabels)
                withObject:nil
                afterDelay:2.0f];
@@ -152,7 +149,7 @@
     textField.font = [Utils preferredFont];
     CGFloat approximateWidth = textField.intrinsicContentSize.width;
           
-    CGFloat kCollectionViewItemViewHeightHeight = 20;
+    CGFloat kCollectionViewItemViewHeightHeight = 24;
 	CGFloat kCollecitonViewItemVerticalPadding = 16;
 	return NSMakeSize(approximateWidth + kCollecitonViewItemVerticalPadding,
 	                  kCollectionViewItemViewHeightHeight);
@@ -203,10 +200,5 @@
 	[self.collectionView reloadData];
 }
 
-- (void)showModalAlert:(NSString *)alertInformativeText {
-	NSAlert* alert = [[NSAlert alloc] init];
-	alert.informativeText = alertInformativeText;
-	[alert runModal];
-}
 
 @end

@@ -112,7 +112,7 @@
 
 	default:
 		// not colored, white (before version 1235, use -1)
-		return [NSColor clearColor];
+		return [NSColor whiteColor];
 		break;
 	}
 }
