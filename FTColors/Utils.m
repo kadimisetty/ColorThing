@@ -49,4 +49,8 @@
     [alert runModal];
 }
 
++ (bool)isOptionKeyPressed {
+    return ([NSEvent modifierFlags ] & NSEventModifierFlagOption);
+}
+
 @end

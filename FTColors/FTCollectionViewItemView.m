@@ -66,13 +66,12 @@
 
 		self->nameButton = [[NSButton alloc] initWithFrame:CGRectZero];
 		self->nameButton.translatesAutoresizingMaskIntoConstraints = NO;
-		[self->nameButton setButtonType:NSButtonTypeMomentaryLight];
 		[self->nameButton setButtonType:NSButtonTypeMomentaryChange];
 		self->nameButton.alignment = NSTextAlignmentCenter;
-		self->nameButton.bordered = NO;
+        self->nameButton.font = [Utils preferredFont];
+        self->nameButton.bordered = NO;
 		self->nameButton.target = self;
-		self->nameButton.action = @selector(openColorLabelGlyphsInNewTab);
-		self->nameButton.font = [Utils preferredFont];
+		self->nameButton.action = @selector(didClickNameButton);
 
 		[self->containerView addSubview:self->nameButton];
 		[Utils constrainEdgesToSuperViewEdgesForView:self->nameButton];
@@ -82,6 +81,17 @@
 }
 
 // MARK: HELPERS
+- (void)didClickNameButton {
+    if ([Utils isOptionKeyPressed]) {
+        // Option key pressed
+        [self openColorLabelGlyphsInNewTab];
+    } else {
+        // Option Key not pressed
+        [Utils showModalAlert:@"No option key pressed."];
+        // TODO: Show popup view
+    }
+}
+
 
 - (void)openColorLabelGlyphsInNewTab {
     [self.delegate

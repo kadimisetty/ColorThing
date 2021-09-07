@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)centerWithinSuperViewForView:(NSView *) someView;
 + (NSFont*)preferredFont;
 + (void)showModalAlert:(NSString *)alertInformativeText;
-
++ (bool)isOptionKeyPressed;
 @end
 
 NS_ASSUME_NONNULL_END
