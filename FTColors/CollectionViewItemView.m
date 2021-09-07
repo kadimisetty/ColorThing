@@ -8,32 +8,42 @@
 #import "CollectionViewItemView.h"
 #import "Utils.h"
 
+
 @implementation CollectionViewItemView {
 	NSButton* nameButton;
 	NSView* containerView;
+    ColorLabel* _colorLabel;
+    
 }
 
 // MARK: ATTRIBUTES
 
-@synthesize name;
-@synthesize nSColorValue;
+- (ColorLabel*)getColorLabel {
+    return _colorLabel;
+}
 
-- (void)setName:(NSString *)newName {
+- (void)setColorLabel:(ColorLabel *)newValue {
+    // Update backed instance property
+    _colorLabel = newValue;
+    
+    // Configure dependant elements
+	NSString* newName =
+		[NSString stringWithFormat:@"%lu",(unsigned long)newValue.allGlyphsCount];
+
 	self->nameButton.attributedTitle =
 		[[NSAttributedString alloc]
 		 initWithString: newName
 		 attributes: [self buttonTextStyleAttributesDict]];
-}
 
-- (void)setNSColorValue:(NSColor *)newValue {
-	self->containerView.layer.backgroundColor = newValue.CGColor;
+	NSColor* newColor = newValue.nSColorValue;
+	self->containerView.layer.backgroundColor = newColor.CGColor;
 }
 
 - (NSDictionary *)buttonTextStyleAttributesDict {
-    return [NSDictionary dictionaryWithObjectsAndKeys:
-            [Utils preferredFont], NSFontAttributeName,
-            [NSColor blackColor], NSForegroundColorAttributeName,
-            nil];
+	return [NSDictionary dictionaryWithObjectsAndKeys:
+	        [Utils preferredFont], NSFontAttributeName,
+	        [NSColor blackColor], NSForegroundColorAttributeName,
+	        nil];
 }
 
 // MARK: LAYOUT
@@ -54,15 +64,14 @@
 		[Utils constrainEdgesToSuperViewEdgesForView:
 		 self->containerView];
 
-        self->nameButton = [[NSButton alloc] initWithFrame:CGRectZero];
+		self->nameButton = [[NSButton alloc] initWithFrame:CGRectZero];
 		self->nameButton.translatesAutoresizingMaskIntoConstraints = NO;
-        // TODO: Fix issue with not showing after clicked.
 		[self->nameButton setButtonType:NSButtonTypeMomentaryLight];
-        [self->nameButton setButtonType:NSButtonTypeMomentaryChange];
+		[self->nameButton setButtonType:NSButtonTypeMomentaryChange];
 		self->nameButton.alignment = NSTextAlignmentCenter;
 		self->nameButton.bordered = NO;
 		self->nameButton.target = self;
-		self->nameButton.action = @selector(nameButtonClicked);
+		self->nameButton.action = @selector(openColorLabelGlyphsInNewTab);
 		self->nameButton.font = [Utils preferredFont];
 
 		[self->containerView addSubview:self->nameButton];
@@ -72,7 +81,13 @@
 	return self;
 }
 
-- (void)nameButtonClicked {
-	[Utils showModalAlert:@"ZOINK!"];
+// MARK: HELPERS
+
+- (void)openColorLabelGlyphsInNewTab {
+    [self.delegate
+     askMainViewControllerToOpenEditViewForGlyphs:
+     self.colorLabel.allGlyphs];
 }
+
+
 @end

@@ -6,13 +6,20 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ColorLabel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol CollectionViewItemViewDelegate <NSObject>
+
+- (void) askMainViewControllerToOpenEditViewForGlyphs:(NSArray<GSGlyph*>*) glyphs;
+
+@end
+
 @interface CollectionViewItemView : NSView
 
-@property (nonatomic) NSString* name;
-@property (nonatomic) NSColor* nSColorValue;
+@property (nonatomic) ColorLabel* colorLabel;
+@property (nonatomic, assign) id<CollectionViewItemViewDelegate> delegate;
 
 @end
 

@@ -13,9 +13,6 @@
 
 #import "ColorLabel.h"
 
-// ColorLabel
-
-
 @implementation FTColors {
 	NSMutableDictionary<NSNumber*, ColorLabel*>* colorLabels;
 }
@@ -74,8 +71,7 @@
 	return [self view];
 }
 
-
-// MARK: LIFECYCLE{
+// MARK: LIFECYCLE
 
 - (id) init {
 	self = [super initWithNibName:@"FTColorsView"
@@ -111,24 +107,24 @@
 	 withObject:nil
 	 afterDelay:2.0f];
 
-    // Reload color lables on interface update
+	// Reload color lables on interface update
 	[[NSNotificationCenter defaultCenter]
 	 addObserver:self
 	 selector:@selector(interfaceDidUpdate)
 	 name: @"GSUpdateInterface"
 	 object:nil];
-    
-    // Set tooltips on buttons
-    self.refreshDataButton.toolTip = @"Refresh Colors Manually";
-    self.openPreferencesButton.toolTip = @"Open Preferences";
+
+	// Set tooltips on buttons
+	self.refreshDataButton.toolTip = @"Refresh Colors Manually";
+	self.openPreferencesButton.toolTip = @"Open Preferences";
 }
 
 - (void)dealloc
 {
-    [[NSNotificationCenter defaultCenter]
-     removeObserver:self
-     name:@"GSUpdateInterface"
-     object:nil];
+	[[NSNotificationCenter defaultCenter]
+	 removeObserver:self
+	 name:@"GSUpdateInterface"
+	 object:nil];
 }
 
 // MARK: CollectionViewDelegate
@@ -140,18 +136,19 @@
 - (nonnull NSCollectionViewItem *)collectionView:(nonnull NSCollectionView *)collectionView
         itemForRepresentedObjectAtIndexPath:(nonnull NSIndexPath *)indexPath {
 
-	// CREATE ITEM
+	// Create Item
 	CollectionViewItem* item = [self.collectionView
 	                            makeItemWithIdentifier:[self collectionViewItemIdentifier]
 	                            forIndexPath:indexPath];
 
-	// CONFIGURE ITEM
-	ColorLabel* cl = [[self sortedColorLabelArray] objectAtIndex:indexPath.item];
+	// Configure Item
+	item.colorLabel =
+		[[self sortedColorLabelArray] objectAtIndex:indexPath.item];
 
-	item.name = [NSString stringWithFormat:@"%ld", (long)cl.allGlyphsCount];
-	item.nSColorValue = cl.nSColorValue;
-
-	// RETURN ITEM
+    // Set CollectionViewItemDelegate
+    item.delegate = self;
+    
+	// Return Item
 	return item;
 }
 
@@ -178,11 +175,9 @@
 	                  kCollectionViewItemViewHeightHeight);
 }
 
-
-
 // MARK: Actions
-- (IBAction)openPreferences:(id)sender {
 
+- (IBAction)openPreferences:(id)sender {
 }
 
 - (IBAction)refreshData:(id)sender {
@@ -223,5 +218,17 @@
 	[self.collectionView reloadData];
 }
 
+// MARK: CollectionViewItemDelegate
+
+-(void) openEditViewForGlyphs:(NSArray<GSGlyph *> *)glyphs {
+	NSMutableString* glyphsAsString =
+		[[NSMutableString alloc] init];
+	for (GSGlyph* g in glyphs) {
+		[glyphsAsString appendString:
+		 [NSString stringWithFormat:@"/%@", g.name]];
+	}
+
+    [self.windowController addTabWithString:[glyphsAsString copy]];
+}
 
 @end

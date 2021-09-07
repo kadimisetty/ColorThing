@@ -7,6 +7,7 @@
 
 #import "CollectionViewItem.h"
 #import "CollectionViewItemView.h"
+#import "Utils.h"
 
 @implementation CollectionViewItem {
 	CollectionViewItemView* _collectionViewItemView;
@@ -14,15 +15,10 @@
 
 // MARK: ATTRIBUTES
 
-@synthesize name;
-@synthesize nSColorValue;
+@synthesize colorLabel;
 
-- (void) setName:(NSString *)newValue {
-	_collectionViewItemView.name = newValue;
-}
-
-- (void)setNSColorValue:(NSColor *)newValue {
-    _collectionViewItemView.nSColorValue = newValue;
+- (void) setColorLabel:(ColorLabel *)newValue {
+    _collectionViewItemView.colorLabel = newValue;
 }
 
 // MARK: LIFECYCLE
@@ -30,8 +26,15 @@
 - (void)loadView {
 	_collectionViewItemView =
 		[[CollectionViewItemView alloc] initWithFrame:CGRectZero];
+    _collectionViewItemView.delegate = self;
+    
 	self.view  = _collectionViewItemView;
 }
 
+// MARK: CollectionViewItemViewDelegate
+
+- (void)askMainViewControllerToOpenEditViewForGlyphs:(nonnull NSArray<GSGlyph *> *)glyphs {
+    [self.delegate openEditViewForGlyphs:glyphs];
+}
 
 @end
