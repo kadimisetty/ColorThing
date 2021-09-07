@@ -7,14 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "CollectionViewItem.h"
+#import "FTCollectionViewItem.h"
 
 @interface FTColors : NSViewController <
 GlyphsPalette,
 NSCollectionViewDelegate,
 NSCollectionViewDataSource,
 NSCollectionViewDelegateFlowLayout,
-CollectionViewItemDelegate>
+FTCollectionViewItemDelegate>
 
 
 @property (weak) IBOutlet NSCollectionView *collectionView;

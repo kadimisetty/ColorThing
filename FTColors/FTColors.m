@@ -7,14 +7,14 @@
 //
 
 #import "FTColors.h"
-#import "CollectionViewItem.h"
+#import "FTCollectionViewItem.h"
 #import "LeftAlignedCollectionViewFlowLayout.h"
 #import "Utils.h"
 
-#import "ColorLabel.h"
+#import "FTColorLabel.h"
 
 @implementation FTColors {
-	NSMutableDictionary<NSNumber*, ColorLabel*>* colorLabels;
+	NSMutableDictionary<NSNumber*, FTColorLabel*>* colorLabels;
 }
 
 // MARK: ATTRIBUTES
@@ -28,7 +28,7 @@
 - (NSArray *)sortedColorLabelArray {
 	return [[self->colorLabels allValues]
 	        sortedArrayUsingComparator: ^NSComparisonResult
-	                (ColorLabel *cl1, ColorLabel *cl2) {
+	                (FTColorLabel *cl1, FTColorLabel *cl2) {
 	                return [[NSNumber numberWithInteger:cl1.colorLabelIndexIntegerValue]
 	                        compare:
 	                        [NSNumber numberWithInteger:cl2.colorLabelIndexIntegerValue]];
@@ -92,7 +92,7 @@
 
 	// Register collection view items
 	[self.collectionView
-	 registerClass:[CollectionViewItem self]
+	 registerClass:[FTCollectionViewItem self]
 	 forItemWithIdentifier:[self collectionViewItemIdentifier]];
 
 	// Custom Layout
@@ -137,7 +137,7 @@
         itemForRepresentedObjectAtIndexPath:(nonnull NSIndexPath *)indexPath {
 
 	// Create Item
-	CollectionViewItem* item = [self.collectionView
+	FTCollectionViewItem* item = [self.collectionView
 	                            makeItemWithIdentifier:[self collectionViewItemIdentifier]
 	                            forIndexPath:indexPath];
 
@@ -162,7 +162,7 @@
 - (NSSize)collectionView:(NSCollectionView *)collectionView
         layout:(NSCollectionViewLayout *)collectionViewLayout
         sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-	ColorLabel* colorLabel = [[self sortedColorLabelArray] objectAtIndex:indexPath.item];
+	FTColorLabel* colorLabel = [[self sortedColorLabelArray] objectAtIndex:indexPath.item];
 	NSString* clAllGlyphsCountString = [NSString stringWithFormat:@"%ld", (long)colorLabel.allGlyphsCount];
 
 	NSTextField* textField = [NSTextField labelWithString:clAllGlyphsCountString];
@@ -198,11 +198,11 @@
 
 		if ([self->colorLabels objectForKey: colorIndexNumber]) {
 			// self->colorLabels contains this ColorLabel
-			ColorLabel* colorLabel = [self->colorLabels objectForKey: colorIndexNumber];
+			FTColorLabel* colorLabel = [self->colorLabels objectForKey: colorIndexNumber];
 			[colorLabel.allGlyphs addObject:glyph];
 		} else {
 			// self->colorLabels does not contain this ColorLabel. Create one.
-			ColorLabel* colorLabel = [[ColorLabel alloc] init];
+			FTColorLabel* colorLabel = [[FTColorLabel alloc] init];
 			colorLabel.colorLabelIndexIntegerValue = colorIndexInteger;
 			colorLabel.allGlyphs = [[NSMutableArray alloc] initWithArray:@[glyph]];
 			colorLabel.activeGlyphIndex = 0;

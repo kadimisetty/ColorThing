@@ -5,19 +5,19 @@
 //  Created by Sri Krishna Kadimisetty on 9/3/21.
 //
 
-#import "CollectionViewItem.h"
-#import "CollectionViewItemView.h"
+#import "FTCollectionViewItem.h"
+#import "FTCollectionViewItemView.h"
 #import "Utils.h"
 
-@implementation CollectionViewItem {
-	CollectionViewItemView* _collectionViewItemView;
+@implementation FTCollectionViewItem {
+	FTCollectionViewItemView* _collectionViewItemView;
 }
 
 // MARK: ATTRIBUTES
 
 @synthesize colorLabel;
 
-- (void) setColorLabel:(ColorLabel *)newValue {
+- (void) setColorLabel:(FTColorLabel *)newValue {
     _collectionViewItemView.colorLabel = newValue;
 }
 
@@ -25,7 +25,7 @@
 
 - (void)loadView {
 	_collectionViewItemView =
-		[[CollectionViewItemView alloc] initWithFrame:CGRectZero];
+		[[FTCollectionViewItemView alloc] initWithFrame:CGRectZero];
     _collectionViewItemView.delegate = self;
     
 	self.view  = _collectionViewItemView;

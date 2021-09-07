@@ -5,24 +5,24 @@
 //  Created by Sri Krishna Kadimisetty on 9/3/21.
 //
 
-#import "CollectionViewItemView.h"
+#import "FTCollectionViewItemView.h"
 #import "Utils.h"
 
 
-@implementation CollectionViewItemView {
+@implementation FTCollectionViewItemView {
 	NSButton* nameButton;
 	NSView* containerView;
-    ColorLabel* _colorLabel;
+    FTColorLabel* _colorLabel;
     
 }
 
 // MARK: ATTRIBUTES
 
-- (ColorLabel*)getColorLabel {
+- (FTColorLabel*)getColorLabel {
     return _colorLabel;
 }
 
-- (void)setColorLabel:(ColorLabel *)newValue {
+- (void)setColorLabel:(FTColorLabel *)newValue {
     // Update backed instance property
     _colorLabel = newValue;
     

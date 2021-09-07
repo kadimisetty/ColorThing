@@ -5,9 +5,9 @@
 //  Created by Sri Krishna Kadimisetty on 9/4/21.
 //
 
-#import "ColorLabel.h"
+#import "FTColorLabel.h"
 
-@implementation ColorLabel
+@implementation FTColorLabel
 // TODO: CONVENIENCE INIT
 
 // MARK: ATTRIOBUTES

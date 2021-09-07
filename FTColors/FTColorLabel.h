@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, ColorLabelIndex) {
 };
 
 
-@interface ColorLabel : NSObject
+@interface FTColorLabel : NSObject
 
 @property (nonatomic) ColorLabelIndex colorLabelIndexIntegerValue;
 @property (nonatomic) NSMutableArray<GSGlyph*>* allGlyphs; // SORTED
