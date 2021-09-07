@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CollectionViewItemView : NSView
 
 @property (nonatomic) ColorLabel* colorLabel;
-@property (nonatomic, assign) id<CollectionViewItemViewDelegate> delegate;
+@property (nonatomic, weak) id<CollectionViewItemViewDelegate> delegate;
 
 @end
 
