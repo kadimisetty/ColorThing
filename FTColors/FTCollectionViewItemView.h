@@ -7,6 +7,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "FTColorLabel.h"
+#import "FTPopoverViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface FTCollectionViewItemView : NSView
+<FTPopoverViewControllerDelegate>
 
 @property (nonatomic) FTColorLabel* colorLabel;
 @property (nonatomic, weak) id<FTCollectionViewItemViewDelegate> delegate;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		106F261126E9BCCD0026E696 /* FTPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106F261026E9BCCD0026E696 /* FTPopoverViewController.m */; };
 		10DCD22D26E3EF4800E955BC /* FTColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DCD22C26E3EF4800E955BC /* FTColorLabel.m */; };
 		10FD4C1B26E2417D0004A31E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FD4C1A26E2417D0004A31E /* Cocoa.framework */; };
 		10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C1E26E2417D0004A31E /* FTColors.m */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		106F260F26E9BCCD0026E696 /* FTPopoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPopoverViewController.h; sourceTree = "<group>"; };
+		106F261026E9BCCD0026E696 /* FTPopoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPopoverViewController.m; sourceTree = "<group>"; };
 		10DCD22B26E3EF4800E955BC /* FTColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTColorLabel.h; sourceTree = "<group>"; };
 		10DCD22C26E3EF4800E955BC /* FTColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTColorLabel.m; sourceTree = "<group>"; };
 		10FD4C1726E2417D0004A31E /* FTColors.glyphsPalette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTColors.glyphsPalette; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,17 +86,19 @@
 			children = (
 				10FD4C1D26E2417D0004A31E /* FTColors.h */,
 				10FD4C1E26E2417D0004A31E /* FTColors.m */,
+				10FD4C2026E2417D0004A31E /* FTColorsView.xib */,
 				10FD4C8226E25C850004A31E /* FTCollectionViewItem.h */,
 				10FD4C8326E25C850004A31E /* FTCollectionViewItem.m */,
 				10FD4C7E26E25BCB0004A31E /* FTCollectionViewItemView.h */,
 				10FD4C7F26E25BCB0004A31E /* FTCollectionViewItemView.m */,
+				106F260F26E9BCCD0026E696 /* FTPopoverViewController.h */,
+				106F261026E9BCCD0026E696 /* FTPopoverViewController.m */,
 				10FD4C7A26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.h */,
 				10FD4C7B26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m */,
 				10DCD22B26E3EF4800E955BC /* FTColorLabel.h */,
 				10DCD22C26E3EF4800E955BC /* FTColorLabel.m */,
 				10FD4C7626E253190004A31E /* Utils.h */,
 				10FD4C7726E253190004A31E /* Utils.m */,
-				10FD4C2026E2417D0004A31E /* FTColorsView.xib */,
 				10FD4C2326E2417D0004A31E /* GlyphsCore.framework */,
 				10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */,
 				10FD4C2726E2417D0004A31E /* Info.plist */,
@@ -174,6 +179,7 @@
 				10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */,
 				10FD4C8426E25C850004A31E /* FTCollectionViewItem.m in Sources */,
 				10FD4C7826E253190004A31E /* Utils.m in Sources */,
+				106F261126E9BCCD0026E696 /* FTPopoverViewController.m in Sources */,
 				10FD4C7C26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

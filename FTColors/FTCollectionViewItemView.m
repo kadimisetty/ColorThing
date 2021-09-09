@@ -7,13 +7,12 @@
 
 #import "FTCollectionViewItemView.h"
 #import "Utils.h"
-
+#import "FTPopoverViewController.h"
 
 @implementation FTCollectionViewItemView {
 	NSButton* nameButton;
 	NSView* containerView;
     FTColorLabel* _colorLabel;
-    
 }
 
 // MARK: ATTRIBUTES
@@ -81,17 +80,6 @@
 }
 
 // MARK: HELPERS
-- (void)didClickNameButton {
-    if ([Utils isOptionKeyPressed]) {
-        // Option key pressed
-        [self openColorLabelGlyphsInNewTab];
-    } else {
-        // Option Key not pressed
-        [Utils showModalAlert:@"No option key pressed."];
-        // TODO: Show popup view
-    }
-}
-
 
 - (void)openColorLabelGlyphsInNewTab {
     [self.delegate
@@ -99,5 +87,40 @@
      self.colorLabel.allGlyphs];
 }
 
+- (void)didClickNameButton {
+    if ([Utils isOptionKeyPressed]) {
+        // Option key pressed
+        [self openColorLabelGlyphsInNewTab];
+    } else {
+        // Option Key not pressed
+        // TODO: Show popup view
+        FTPopoverViewController* somePopoverViewController =
+            [[FTPopoverViewController alloc] init];
+        somePopoverViewController.delegate = self;
+        
+        somePopoverViewController.colorLabel = self.colorLabel;
+        
+        NSPopover* somePopover =
+        [[NSPopover alloc] init];
+        somePopover.contentSize = NSMakeSize(162, 300);
+        somePopover.behavior = NSPopoverBehaviorTransient;
+        somePopover.contentViewController = somePopoverViewController;
+        
+        NSRect rectForSomePopover = [self
+                            convertRect:[self bounds]
+                            toView:[[NSApp mainWindow] contentView]];
+        
+        [somePopover showRelativeToRect:rectForSomePopover
+                                 ofView:[[NSApp mainWindow] contentView]
+                          preferredEdge:NSMinYEdge];
+
+        
+    }
+}
+
+- (void)askMainViewControllerToOpenEditViewForGlyphs:(NSArray<GSGlyph *> *)glyphs {
+    [self.delegate
+     askMainViewControllerToOpenEditViewForGlyphs: glyphs];
+}
 
 @end
