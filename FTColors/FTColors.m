@@ -43,7 +43,7 @@
 
 - (NSString *)title {
 	// Return the name of the tool as it will appear in the menu.
-	return @"FTColors A";
+	return @"FT Colors";
 }
 
 - (NSInteger)maxHeight {
