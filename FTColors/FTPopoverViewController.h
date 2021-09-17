@@ -18,8 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface FTPopoverViewController : NSViewController
-<NSTableViewDelegate,
-NSTableViewDataSource>
+	<NSTableViewDelegate,
+	 NSTableViewDataSource>
 
 @property (nonatomic, weak) id<FTPopoverViewControllerDelegate> delegate;
 

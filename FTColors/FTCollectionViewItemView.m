@@ -12,20 +12,20 @@
 @implementation FTCollectionViewItemView {
 	NSButton* nameButton;
 	NSView* containerView;
-    FTColorLabel* _colorLabel;
+	FTColorLabel* _colorLabel;
 }
 
 // MARK: ATTRIBUTES
 
 - (FTColorLabel*)getColorLabel {
-    return _colorLabel;
+	return _colorLabel;
 }
 
 - (void)setColorLabel:(FTColorLabel *)newValue {
-    // Update backed instance property
-    _colorLabel = newValue;
-    
-    // Configure dependant elements
+	// Update backed instance property
+	_colorLabel = newValue;
+
+	// Configure dependant elements
 	NSString* newName =
 		[NSString stringWithFormat:@"%lu",(unsigned long)newValue.allGlyphsCount];
 
@@ -51,6 +51,8 @@
 {
 	self = [super initWithFrame:frame];
 	if (self) {
+
+		// INACTIVE COLORLABELVIEW
 		self->containerView = [[NSView alloc] initWithFrame:frame];
 		self->containerView.translatesAutoresizingMaskIntoConstraints = NO;
 		self->containerView.wantsLayer = YES;
@@ -67,13 +69,15 @@
 		self->nameButton.translatesAutoresizingMaskIntoConstraints = NO;
 		[self->nameButton setButtonType:NSButtonTypeMomentaryChange];
 		self->nameButton.alignment = NSTextAlignmentCenter;
-        self->nameButton.font = [Utils preferredFont];
-        self->nameButton.bordered = NO;
+		self->nameButton.font = [Utils preferredFont];
+		self->nameButton.bordered = NO;
 		self->nameButton.target = self;
 		self->nameButton.action = @selector(didClickNameButton);
 
 		[self->containerView addSubview:self->nameButton];
 		[Utils constrainEdgesToSuperViewEdgesForView:self->nameButton];
+
+		// TODO: ACTIVE COLORLABEL
 	}
 
 	return self;
@@ -82,45 +86,45 @@
 // MARK: HELPERS
 
 - (void)openColorLabelGlyphsInNewTab {
-    [self.delegate
-     askMainViewControllerToOpenEditViewForGlyphs:
-     self.colorLabel.allGlyphs];
+	[self.delegate
+	 askMainViewControllerToOpenEditViewForGlyphs:
+	 self.colorLabel.allGlyphs];
 }
 
 - (void)didClickNameButton {
-    if ([Utils isOptionKeyPressed]) {
-        // Option key pressed
-        [self openColorLabelGlyphsInNewTab];
-    } else {
-        // Option Key not pressed
-        // TODO: Show popup view
-        FTPopoverViewController* somePopoverViewController =
-            [[FTPopoverViewController alloc] init];
-        somePopoverViewController.delegate = self;
-        
-        somePopoverViewController.colorLabel = self.colorLabel;
-        
-        NSPopover* somePopover =
-        [[NSPopover alloc] init];
-        somePopover.contentSize = NSMakeSize(162, 300);
-        somePopover.behavior = NSPopoverBehaviorTransient;
-        somePopover.contentViewController = somePopoverViewController;
-        
-        NSRect rectForSomePopover = [self
-                            convertRect:[self bounds]
-                            toView:[[NSApp mainWindow] contentView]];
-        
-        [somePopover showRelativeToRect:rectForSomePopover
-                                 ofView:[[NSApp mainWindow] contentView]
-                          preferredEdge:NSMinYEdge];
+	if ([Utils isOptionKeyPressed]) {
+		// Option key pressed
+		[self openColorLabelGlyphsInNewTab];
+	} else {
+		// Option Key not pressed
+		// TODO: Show popup view
+		FTPopoverViewController* somePopoverViewController =
+			[[FTPopoverViewController alloc] init];
+		somePopoverViewController.delegate = self;
 
-        
-    }
+		somePopoverViewController.colorLabel = self.colorLabel;
+
+		NSPopover* somePopover =
+			[[NSPopover alloc] init];
+		somePopover.contentSize = NSMakeSize(162, 300);
+		somePopover.behavior = NSPopoverBehaviorTransient;
+		somePopover.contentViewController = somePopoverViewController;
+
+		NSRect rectForSomePopover = [self
+		                             convertRect:[self bounds]
+		                             toView:[[NSApp mainWindow] contentView]];
+
+		[somePopover showRelativeToRect:rectForSomePopover
+		 ofView:[[NSApp mainWindow] contentView]
+		 preferredEdge:NSMinYEdge];
+
+
+	}
 }
 
 - (void)askMainViewControllerToOpenEditViewForGlyphs:(NSArray<GSGlyph *> *)glyphs {
-    [self.delegate
-     askMainViewControllerToOpenEditViewForGlyphs: glyphs];
+	[self.delegate
+	 askMainViewControllerToOpenEditViewForGlyphs: glyphs];
 }
 
 @end

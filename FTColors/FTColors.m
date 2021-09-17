@@ -138,16 +138,16 @@
 
 	// Create Item
 	FTCollectionViewItem* item = [self.collectionView
-	                            makeItemWithIdentifier:[self collectionViewItemIdentifier]
-	                            forIndexPath:indexPath];
+	                              makeItemWithIdentifier:[self collectionViewItemIdentifier]
+	                              forIndexPath:indexPath];
 
 	// Configure Item
 	item.colorLabel =
 		[[self sortedColorLabelArray] objectAtIndex:indexPath.item];
 
-    // Set CollectionViewItemDelegate
-    item.delegate = self;
-    
+	// Set CollectionViewItemDelegate
+	item.delegate = self;
+
 	// Return Item
 	return item;
 }
@@ -163,6 +163,8 @@
         layout:(NSCollectionViewLayout *)collectionViewLayout
         sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 	FTColorLabel* colorLabel = [[self sortedColorLabelArray] objectAtIndex:indexPath.item];
+
+	// INACTIVE COLORLABEL
 	NSString* clAllGlyphsCountString = [NSString stringWithFormat:@"%ld", (long)colorLabel.allGlyphsCount];
 
 	NSTextField* textField = [NSTextField labelWithString:clAllGlyphsCountString];
@@ -173,6 +175,8 @@
 	CGFloat kCollecitonViewItemVerticalPadding = 16;
 	return NSMakeSize(approximateWidth + kCollecitonViewItemVerticalPadding,
 	                  kCollectionViewItemViewHeightHeight);
+
+	// TODO: INACTIVE COLORLABEL
 }
 
 // MARK: Actions
@@ -228,7 +232,7 @@
 		 [NSString stringWithFormat:@"/%@", g.name]];
 	}
 
-    [self.windowController addTabWithString:[glyphsAsString copy]];
+	[self.windowController addTabWithString:[glyphsAsString copy]];
 }
 
 @end

@@ -44,13 +44,13 @@
 }
 
 + (void)showModalAlert:(NSString *)informativeText {
-    NSAlert* alert = [[NSAlert alloc] init];
-    alert.informativeText = informativeText;
-    [alert runModal];
+	NSAlert* alert = [[NSAlert alloc] init];
+	alert.informativeText = informativeText;
+	[alert runModal];
 }
 
 + (bool)isOptionKeyPressed {
-    return ([NSEvent modifierFlags ] & NSEventModifierFlagOption);
+	return ([NSEvent modifierFlags ] & NSEventModifierFlagOption);
 }
 
 @end

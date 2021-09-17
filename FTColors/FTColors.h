@@ -10,11 +10,11 @@
 #import "FTCollectionViewItem.h"
 
 @interface FTColors : NSViewController <
-GlyphsPalette,
-NSCollectionViewDelegate,
-NSCollectionViewDataSource,
-NSCollectionViewDelegateFlowLayout,
-FTCollectionViewItemDelegate>
+		GlyphsPalette,
+		NSCollectionViewDelegate,
+		NSCollectionViewDataSource,
+		NSCollectionViewDelegateFlowLayout,
+		FTCollectionViewItemDelegate>
 
 
 @property (weak) IBOutlet NSCollectionView *collectionView;

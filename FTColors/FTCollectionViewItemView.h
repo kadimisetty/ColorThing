@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface FTCollectionViewItemView : NSView
-<FTPopoverViewControllerDelegate>
+	<FTPopoverViewControllerDelegate>
 
 @property (nonatomic) FTColorLabel* colorLabel;
 @property (nonatomic, weak) id<FTCollectionViewItemViewDelegate> delegate;
