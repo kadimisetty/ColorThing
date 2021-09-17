@@ -168,7 +168,7 @@
 	NSString* clAllGlyphsCountString = [NSString stringWithFormat:@"%ld", (long)colorLabel.allGlyphsCount];
 
 	NSTextField* textField = [NSTextField labelWithString:clAllGlyphsCountString];
-	textField.font = [Utils preferredFont];
+	textField.font = [Utils colorLabelBodyPreferredFont];
 	CGFloat approximateWidth = textField.intrinsicContentSize.width;
 
 	CGFloat kCollectionViewItemViewHeightHeight = 24;

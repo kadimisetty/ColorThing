@@ -39,9 +39,21 @@
 }
 
 - (NSDictionary *)buttonTextStyleAttributesDict {
+	ColorLabelIndex colorLabelIndexIntegerValue = self.colorLabel.colorLabelIndexIntegerValue;
+	NSColor* preferredColor = [NSColor blackColor];
+
+	if (
+		(colorLabelIndexIntegerValue == kColorLabelColorCharcoal)
+		|| (colorLabelIndexIntegerValue == kColorLabelColorPurple )
+		|| (colorLabelIndexIntegerValue == kColorLabelColorDarkBlue ))
+	{
+		preferredColor = [NSColor whiteColor];
+	}
+
 	return [NSDictionary dictionaryWithObjectsAndKeys:
-	        [Utils preferredFont], NSFontAttributeName,
-	        [NSColor blackColor], NSForegroundColorAttributeName,
+	        [Utils colorLabelBodyPreferredFont], NSFontAttributeName,
+	        preferredColor,
+	        NSForegroundColorAttributeName,
 	        nil];
 }
 
@@ -69,7 +81,7 @@
 		self->nameButton.translatesAutoresizingMaskIntoConstraints = NO;
 		[self->nameButton setButtonType:NSButtonTypeMomentaryChange];
 		self->nameButton.alignment = NSTextAlignmentCenter;
-		self->nameButton.font = [Utils preferredFont];
+		self->nameButton.font = [Utils colorLabelBodyPreferredFont];
 		self->nameButton.bordered = NO;
 		self->nameButton.target = self;
 		self->nameButton.action = @selector(didClickNameButton);

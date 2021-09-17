@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)constrainEdgesToSuperViewEdgesForView:(NSView *) someView;
 + (void)centerWithinSuperViewForView:(NSView *) someView;
-+ (NSFont*)preferredFont;
++ (NSFont*)colorLabelBodyPreferredFont;
 + (void)showModalAlert:(NSString *)alertInformativeText;
 + (bool)isOptionKeyPressed;
 @end
