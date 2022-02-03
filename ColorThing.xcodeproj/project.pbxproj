@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		106F261126E9BCCD0026E696 /* CTPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106F261026E9BCCD0026E696 /* CTPopoverViewController.m */; };
 		10DCD22D26E3EF4800E955BC /* CTColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DCD22C26E3EF4800E955BC /* CTColorLabel.m */; };
+		10FAE8B327AC387800B16504 /* NSColor+LighterAndDarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FAE8B227AC387800B16504 /* NSColor+LighterAndDarker.m */; };
 		10FD4C1B26E2417D0004A31E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FD4C1A26E2417D0004A31E /* Cocoa.framework */; };
 		10FD4C1F26E2417D0004A31E /* ColorThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C1E26E2417D0004A31E /* ColorThing.m */; };
 		10FD4C2226E2417D0004A31E /* ColorThingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2026E2417D0004A31E /* ColorThingView.xib */; };
@@ -25,6 +26,8 @@
 		106F261026E9BCCD0026E696 /* CTPopoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTPopoverViewController.m; sourceTree = "<group>"; };
 		10DCD22B26E3EF4800E955BC /* CTColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTColorLabel.h; sourceTree = "<group>"; };
 		10DCD22C26E3EF4800E955BC /* CTColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTColorLabel.m; sourceTree = "<group>"; };
+		10FAE8B127AC387800B16504 /* NSColor+LighterAndDarker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSColor+LighterAndDarker.h"; sourceTree = "<group>"; };
+		10FAE8B227AC387800B16504 /* NSColor+LighterAndDarker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSColor+LighterAndDarker.m"; sourceTree = "<group>"; };
 		10FD4C1726E2417D0004A31E /* ColorThing.glyphsPalette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorThing.glyphsPalette; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FD4C1A26E2417D0004A31E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		10FD4C1D26E2417D0004A31E /* ColorThing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorThing.h; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 				10DCD22C26E3EF4800E955BC /* CTColorLabel.m */,
 				10FD4C7626E253190004A31E /* Utils.h */,
 				10FD4C7726E253190004A31E /* Utils.m */,
+				10FAE8B127AC387800B16504 /* NSColor+LighterAndDarker.h */,
+				10FAE8B227AC387800B16504 /* NSColor+LighterAndDarker.m */,
 				10FD4C2326E2417D0004A31E /* GlyphsCore.framework */,
 				10FD4C2526E2417D0004A31E /* ColorThing-Prefix.pch */,
 				10FD4C2726E2417D0004A31E /* Info.plist */,
@@ -177,6 +182,7 @@
 				10DCD22D26E3EF4800E955BC /* CTColorLabel.m in Sources */,
 				10FD4C8026E25BCB0004A31E /* CTCollectionViewItemView.m in Sources */,
 				10FD4C1F26E2417D0004A31E /* ColorThing.m in Sources */,
+				10FAE8B327AC387800B16504 /* NSColor+LighterAndDarker.m in Sources */,
 				10FD4C8426E25C850004A31E /* CTCollectionViewItem.m in Sources */,
 				10FD4C7826E253190004A31E /* Utils.m in Sources */,
 				106F261126E9BCCD0026E696 /* CTPopoverViewController.m in Sources */,

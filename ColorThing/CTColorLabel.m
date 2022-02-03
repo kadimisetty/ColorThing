@@ -110,7 +110,8 @@
             break;
             
         default:
-            return [NSColor whiteColor];
+            // WHITE
+            return [NSColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
             break;
 	}
 }
