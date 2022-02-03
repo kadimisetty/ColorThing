@@ -59,49 +59,59 @@
 }
 
 - (NSColor*) backgroundColor {
-	// TODO: Get exact NXColor values using `[GSGlyph color]`
 	switch (self.colorLabelIndexIntegerValue)
 	{
-	case kColorLabelColorRed:
-		return [NSColor colorWithRed:0.713 green:0.24 blue:0.099 alpha:1.0];
-		break;
-	case kColorLabelColorOrange:
-		return [NSColor colorWithRed:0.822 green:0.526 blue:0.141 alpha:1.0];
-		break;
-	case kColorLabelColorBrown:
-		return [NSColor colorWithRed:0.552 green:0.414 blue:0.198 alpha:1.0];
-		break;
-	case kColorLabelColorYellow:
-		return [NSColor colorWithRed:0.806 green:0.751 blue:0.098 alpha:1.0];
-		break;
-	case kColorLabelColorLightGreen:
-		return [NSColor colorWithRed:0.567 green:0.79 blue:0.343 alpha:1.0];
-		break;
-	case kColorLabelColorDarkGreen:
-		return [NSColor colorWithRed:0.08 green:0.487 blue:0.088 alpha:1.0];
-		break;
-	case kColorLabelColorLightBlue:
-		return [NSColor colorWithRed:0.094 green:0.511 blue:0.818 alpha:1.0];
-		break;
-	case kColorLabelColorDarkBlue:
-		return [NSColor colorWithRed:0.037 green:0.194 blue:0.742 alpha:1.0];
-		break;
-	case kColorLabelColorPurple:
-		return [NSColor colorWithRed:0.431 green:0.112 blue:0.669 alpha:1.0];
-		break;
-	case kColorLabelColorMagenta:
-		return [NSColor colorWithRed:0.969 green:0.473 blue:0.72 alpha:1.0];
-		break;
-	case kColorLabelColorLightGray:
-		return [NSColor colorWithRed:0.631 green:0.631 blue:0.635 alpha:1.0];
-		break;
-	case kColorLabelColorCharcoal:
-		return [NSColor colorWithRed:0.231 green:0.231 blue:0.235 alpha:1.0];
-		break;
+        case kColorLabelColorRed:
+            return [NSColor colorWithRed:0.85 green:0.26 blue:0.06 alpha:1.0];
+            break;
 
-	default:
-		return [NSColor whiteColor];
-		break;
+        case kColorLabelColorOrange:
+            return [NSColor colorWithRed:0.99 green:0.62 blue:0.11 alpha:1.0];
+            break;
+
+        case kColorLabelColorBrown:
+            return [NSColor colorWithRed:0.65 green:0.48 blue:0.2 alpha:1.0];
+            break;
+
+        case kColorLabelColorYellow:
+            return [NSColor colorWithRed:0.97 green:0.9 blue:0 alpha:1.0];
+            break;
+
+        case kColorLabelColorLightGreen:
+            return [NSColor colorWithRed:0.67 green:0.95 blue:0.38 alpha:1.0];
+            break;
+
+        case kColorLabelColorDarkGreen:
+            return [NSColor colorWithRed:0.04 green:0.57 blue:0.04 alpha:1.0];
+            break;
+
+        case kColorLabelColorLightBlue:
+            return [NSColor colorWithRed:0.06 green:0.6 blue:0.98 alpha:1.0];
+            break;
+
+        case kColorLabelColorDarkBlue:
+            return [NSColor colorWithRed:0 green:0.2 blue:0.88 alpha:1.0];
+            break;
+
+        case kColorLabelColorPurple:
+            return [NSColor colorWithRed:0.5 green:0.09 blue:0.79 alpha:1.0];
+            break;
+
+        case kColorLabelColorMagenta:
+            return [NSColor colorWithRed:0.98 green:0.36 blue:0.67 alpha:1.0];
+            break;
+
+        case kColorLabelColorLightGray:
+            return [NSColor colorWithRed:0.75 green:0.75 blue:0.75 alpha:1.0];
+            break;
+
+        case kColorLabelColorCharcoal:
+            return [NSColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1.0];
+            break;
+            
+        default:
+            return [NSColor whiteColor];
+            break;
 	}
 }
 
