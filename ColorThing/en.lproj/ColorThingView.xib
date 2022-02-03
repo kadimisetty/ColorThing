@@ -5,7 +5,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="FTColors">
+        <customObject id="-2" userLabel="File's Owner" customClass="ColorThing">
             <connections>
                 <outlet property="collectionView" destination="YrB-KJ-ZzA" id="cgU-Fi-x94"/>
                 <outlet property="openPreferencesButton" destination="CHK-pD-dNF" id="qCi-zd-hCQ"/>

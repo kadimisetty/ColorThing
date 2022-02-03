@@ -1,31 +1,31 @@
 //
-//  FTPopoverViewController.m
-//  FTColors
+//  CTPopoverViewController.m
+//  ColorThing
 //
 //  Created by Sri Krishna Kadimisetty on 9/9/21.
 //
 
-#import "FTPopoverViewController.h"
+#import "CTPopoverViewController.h"
 #import "Utils.h"
 
-@interface FTPopoverViewController ()
+@interface CTPopoverViewController ()
 
 @end
 
-@implementation FTPopoverViewController {
+@implementation CTPopoverViewController {
 	NSScrollView* containerScrollView;
 	NSTableView* tableView;
 	NSArray<NSString*>* names;
-	FTColorLabel* _colorLabel;
+	CTColorLabel* _colorLabel;
 }
 
 // MARK: ATTRIBUTES
 
-- (FTColorLabel*)getColorLabel {
+- (CTColorLabel*)getColorLabel {
 	return _colorLabel;
 }
 
-- (void)setColorLabel:(FTColorLabel *)newValue {
+- (void)setColorLabel:(CTColorLabel *)newValue {
 	// Update backed instance property
 	_colorLabel = newValue;
 //    [self->tableView reloadData];

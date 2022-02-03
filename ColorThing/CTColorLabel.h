@@ -1,6 +1,6 @@
 //
 //  ColorLabel.h
-//  FTColors
+//  ColorThing
 //
 //  Created by Sri Krishna Kadimisetty on 9/4/21.
 //
@@ -29,7 +29,7 @@ typedef NS_ENUM (NSInteger, ColorLabelIndex) {
 };
 
 
-@interface FTColorLabel : NSObject
+@interface CTColorLabel : NSObject
 
 @property (nonatomic) ColorLabelIndex colorLabelIndexIntegerValue;
 @property (nonatomic) NSMutableArray<GSGlyph*>* allGlyphs; // SORTED

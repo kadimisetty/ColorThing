@@ -1,20 +1,20 @@
 //
-//  FTColors.h
-//  FTColors
+//  ColorThing.h
+//  ColorThing
 //
 //  Created by Sri Krishna Kadimisetty on 9/3/21.
 //
 //
 
 #import <Cocoa/Cocoa.h>
-#import "FTCollectionViewItem.h"
+#import "CTCollectionViewItem.h"
 
-@interface FTColors : NSViewController <
+@interface ColorThing : NSViewController <
 		GlyphsPalette,
 		NSCollectionViewDelegate,
 		NSCollectionViewDataSource,
 		NSCollectionViewDelegateFlowLayout,
-		FTCollectionViewItemDelegate>
+		CTCollectionViewItemDelegate>
 
 
 @property (weak) IBOutlet NSCollectionView *collectionView;

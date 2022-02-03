@@ -1,27 +1,27 @@
 //
 //  CollectionViewItemView.m
-//  FTColors
+//  ColorThing
 //
 //  Created by Sri Krishna Kadimisetty on 9/3/21.
 //
 
-#import "FTCollectionViewItemView.h"
+#import "CTCollectionViewItemView.h"
 #import "Utils.h"
-#import "FTPopoverViewController.h"
+#import "CTPopoverViewController.h"
 
-@implementation FTCollectionViewItemView {
+@implementation CTCollectionViewItemView {
 	NSButton* nameButton;
 	NSView* containerView;
-	FTColorLabel* _colorLabel;
+	CTColorLabel* _colorLabel;
 }
 
 // MARK: ATTRIBUTES
 
-- (FTColorLabel*)getColorLabel {
+- (CTColorLabel*)getColorLabel {
 	return _colorLabel;
 }
 
-- (void)setColorLabel:(FTColorLabel *)newValue {
+- (void)setColorLabel:(CTColorLabel *)newValue {
 	// Update backed instance property
 	_colorLabel = newValue;
 
@@ -110,8 +110,8 @@
 	} else {
 		// Option Key not pressed
 		// TODO: Show popup view
-		FTPopoverViewController* somePopoverViewController =
-			[[FTPopoverViewController alloc] init];
+		CTPopoverViewController* somePopoverViewController =
+			[[CTPopoverViewController alloc] init];
 		somePopoverViewController.delegate = self;
 
 		somePopoverViewController.colorLabel = self.colorLabel;

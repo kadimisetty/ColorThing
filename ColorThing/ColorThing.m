@@ -1,20 +1,20 @@
 //
-//  FTColors.m
-//  FTColors
+//  ColorThing.m
+//  ColorThing
 //
 //  Created by Sri Krishna Kadimisetty on 9/3/21.
 //
 //
 
-#import "FTColors.h"
-#import "FTCollectionViewItem.h"
+#import "ColorThing.h"
+#import "CTCollectionViewItem.h"
 #import "LeftAlignedCollectionViewFlowLayout.h"
 #import "Utils.h"
 
-#import "FTColorLabel.h"
+#import "CTColorLabel.h"
 
-@implementation FTColors {
-	NSMutableDictionary<NSNumber*, FTColorLabel*>* colorLabels;
+@implementation ColorThing {
+	NSMutableDictionary<NSNumber*, CTColorLabel*>* colorLabels;
 }
 
 // MARK: ATTRIBUTES
@@ -28,7 +28,7 @@
 - (NSArray *)sortedColorLabelArray {
 	return [[self->colorLabels allValues]
 	        sortedArrayUsingComparator: ^NSComparisonResult
-	                (FTColorLabel *cl1, FTColorLabel *cl2) {
+	                (CTColorLabel *cl1, CTColorLabel *cl2) {
 	                return [[NSNumber numberWithInteger:cl1.colorLabelIndexIntegerValue]
 	                        compare:
 	                        [NSNumber numberWithInteger:cl2.colorLabelIndexIntegerValue]];
@@ -43,7 +43,7 @@
 
 - (NSString *)title {
 	// Return the name of the tool as it will appear in the menu.
-	return @"FT Colors";
+	return @"Color Thing";
 }
 
 - (NSInteger)maxHeight {
@@ -56,14 +56,14 @@
 
 - (NSUInteger)currentHeight {
 	return [[NSUserDefaults standardUserDefaults]
-	        integerForKey:@"FTColorsCurrentHeight"];
+	        integerForKey:@"ColorThingCurrentHeight"];
 }
 
 - (void)setCurrentHeight:(NSUInteger)newHeight {
 	if (newHeight >= [self minHeight] && newHeight <= [self maxHeight]) {
 		[[NSUserDefaults standardUserDefaults]
 		 setInteger:newHeight
-		 forKey:@"FTColorsCurrentHeight"];
+		 forKey:@"ColorThingCurrentHeight"];
 	}
 }
 
@@ -74,7 +74,7 @@
 // MARK: LIFECYCLE
 
 - (id) init {
-	self = [super initWithNibName:@"FTColorsView"
+	self = [super initWithNibName:@"ColorThingView"
 	        bundle:[NSBundle bundleForClass:[self class]]];
 	return self;
 }
@@ -92,7 +92,7 @@
 
 	// Register collection view items
 	[self.collectionView
-	 registerClass:[FTCollectionViewItem self]
+	 registerClass:[CTCollectionViewItem self]
 	 forItemWithIdentifier:[self collectionViewItemIdentifier]];
 
 	// Custom Layout
@@ -137,7 +137,7 @@
         itemForRepresentedObjectAtIndexPath:(nonnull NSIndexPath *)indexPath {
 
 	// Create Item
-	FTCollectionViewItem* item = [self.collectionView
+	CTCollectionViewItem* item = [self.collectionView
 	                              makeItemWithIdentifier:[self collectionViewItemIdentifier]
 	                              forIndexPath:indexPath];
 
@@ -162,7 +162,7 @@
 - (NSSize)collectionView:(NSCollectionView *)collectionView
         layout:(NSCollectionViewLayout *)collectionViewLayout
         sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-	FTColorLabel* colorLabel = [[self sortedColorLabelArray] objectAtIndex:indexPath.item];
+	CTColorLabel* colorLabel = [[self sortedColorLabelArray] objectAtIndex:indexPath.item];
 
 	// INACTIVE COLORLABEL
 	NSString* clAllGlyphsCountString = [NSString stringWithFormat:@"%ld", (long)colorLabel.allGlyphsCount];
@@ -202,11 +202,11 @@
 
 		if ([self->colorLabels objectForKey: colorIndexNumber]) {
 			// self->colorLabels contains this ColorLabel
-			FTColorLabel* colorLabel = [self->colorLabels objectForKey: colorIndexNumber];
+			CTColorLabel* colorLabel = [self->colorLabels objectForKey: colorIndexNumber];
 			[colorLabel.allGlyphs addObject:glyph];
 		} else {
 			// self->colorLabels does not contain this ColorLabel. Create one.
-			FTColorLabel* colorLabel = [[FTColorLabel alloc] init];
+			CTColorLabel* colorLabel = [[CTColorLabel alloc] init];
 			colorLabel.colorLabelIndexIntegerValue = colorIndexInteger;
 			colorLabel.allGlyphs = [[NSMutableArray alloc] initWithArray:@[glyph]];
 			colorLabel.activeGlyphIndex = 0;

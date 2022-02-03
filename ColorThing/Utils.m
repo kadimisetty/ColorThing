@@ -1,6 +1,6 @@
 //
 //  Utils.m
-//  FTColors
+//  ColorThing
 //
 //  Created by Sri Krishna Kadimisetty on 9/3/21.
 //

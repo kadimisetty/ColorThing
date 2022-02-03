@@ -1,13 +1,13 @@
 //
 //  ColorLabel.m
-//  FTColors
+//  ColorThing
 //
 //  Created by Sri Krishna Kadimisetty on 9/4/21.
 //
 
-#import "FTColorLabel.h"
+#import "CTColorLabel.h"
 
-@implementation FTColorLabel
+@implementation CTColorLabel
 // TODO: CONVENIENCE INIT
 
 // MARK: ATTRIOBUTES

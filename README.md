@@ -1,1 +1,1 @@
-# FTColors
+# ColorThing

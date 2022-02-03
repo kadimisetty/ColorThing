@@ -7,40 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		106F261126E9BCCD0026E696 /* FTPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106F261026E9BCCD0026E696 /* FTPopoverViewController.m */; };
-		10DCD22D26E3EF4800E955BC /* FTColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DCD22C26E3EF4800E955BC /* FTColorLabel.m */; };
+		106F261126E9BCCD0026E696 /* CTPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 106F261026E9BCCD0026E696 /* CTPopoverViewController.m */; };
+		10DCD22D26E3EF4800E955BC /* CTColorLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DCD22C26E3EF4800E955BC /* CTColorLabel.m */; };
 		10FD4C1B26E2417D0004A31E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FD4C1A26E2417D0004A31E /* Cocoa.framework */; };
-		10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C1E26E2417D0004A31E /* FTColors.m */; };
-		10FD4C2226E2417D0004A31E /* FTColorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2026E2417D0004A31E /* FTColorsView.xib */; };
+		10FD4C1F26E2417D0004A31E /* ColorThing.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C1E26E2417D0004A31E /* ColorThing.m */; };
+		10FD4C2226E2417D0004A31E /* ColorThingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2026E2417D0004A31E /* ColorThingView.xib */; };
 		10FD4C2426E2417D0004A31E /* GlyphsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10FD4C2326E2417D0004A31E /* GlyphsCore.framework */; };
-		10FD4C2626E2417D0004A31E /* FTColors-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */; };
+		10FD4C2626E2417D0004A31E /* ColorThing-Prefix.pch in Resources */ = {isa = PBXBuildFile; fileRef = 10FD4C2526E2417D0004A31E /* ColorThing-Prefix.pch */; };
 		10FD4C7826E253190004A31E /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C7726E253190004A31E /* Utils.m */; };
 		10FD4C7C26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C7B26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m */; };
-		10FD4C8026E25BCB0004A31E /* FTCollectionViewItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C7F26E25BCB0004A31E /* FTCollectionViewItemView.m */; };
-		10FD4C8426E25C850004A31E /* FTCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C8326E25C850004A31E /* FTCollectionViewItem.m */; };
+		10FD4C8026E25BCB0004A31E /* CTCollectionViewItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C7F26E25BCB0004A31E /* CTCollectionViewItemView.m */; };
+		10FD4C8426E25C850004A31E /* CTCollectionViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD4C8326E25C850004A31E /* CTCollectionViewItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		106F260F26E9BCCD0026E696 /* FTPopoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPopoverViewController.h; sourceTree = "<group>"; };
-		106F261026E9BCCD0026E696 /* FTPopoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPopoverViewController.m; sourceTree = "<group>"; };
-		10DCD22B26E3EF4800E955BC /* FTColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTColorLabel.h; sourceTree = "<group>"; };
-		10DCD22C26E3EF4800E955BC /* FTColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTColorLabel.m; sourceTree = "<group>"; };
-		10FD4C1726E2417D0004A31E /* FTColors.glyphsPalette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTColors.glyphsPalette; sourceTree = BUILT_PRODUCTS_DIR; };
+		106F260F26E9BCCD0026E696 /* CTPopoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTPopoverViewController.h; sourceTree = "<group>"; };
+		106F261026E9BCCD0026E696 /* CTPopoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTPopoverViewController.m; sourceTree = "<group>"; };
+		10DCD22B26E3EF4800E955BC /* CTColorLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTColorLabel.h; sourceTree = "<group>"; };
+		10DCD22C26E3EF4800E955BC /* CTColorLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTColorLabel.m; sourceTree = "<group>"; };
+		10FD4C1726E2417D0004A31E /* ColorThing.glyphsPalette */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorThing.glyphsPalette; sourceTree = BUILT_PRODUCTS_DIR; };
 		10FD4C1A26E2417D0004A31E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		10FD4C1D26E2417D0004A31E /* FTColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTColors.h; sourceTree = "<group>"; };
-		10FD4C1E26E2417D0004A31E /* FTColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTColors.m; sourceTree = "<group>"; };
-		10FD4C2126E2417D0004A31E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FTColorsView.xib; sourceTree = "<group>"; };
+		10FD4C1D26E2417D0004A31E /* ColorThing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorThing.h; sourceTree = "<group>"; };
+		10FD4C1E26E2417D0004A31E /* ColorThing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorThing.m; sourceTree = "<group>"; };
+		10FD4C2126E2417D0004A31E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ColorThingView.xib; sourceTree = "<group>"; };
 		10FD4C2326E2417D0004A31E /* GlyphsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GlyphsCore.framework; path = "/Applications/Glyphs 3.app/Contents/Frameworks/GlyphsCore.framework"; sourceTree = "<absolute>"; };
-		10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTColors-Prefix.pch"; sourceTree = "<group>"; };
+		10FD4C2526E2417D0004A31E /* ColorThing-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ColorThing-Prefix.pch"; sourceTree = "<group>"; };
 		10FD4C2726E2417D0004A31E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10FD4C7626E253190004A31E /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		10FD4C7726E253190004A31E /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		10FD4C7A26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftAlignedCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		10FD4C7B26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftAlignedCollectionViewFlowLayout.m; sourceTree = "<group>"; };
-		10FD4C7E26E25BCB0004A31E /* FTCollectionViewItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCollectionViewItemView.h; sourceTree = "<group>"; };
-		10FD4C7F26E25BCB0004A31E /* FTCollectionViewItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCollectionViewItemView.m; sourceTree = "<group>"; };
-		10FD4C8226E25C850004A31E /* FTCollectionViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTCollectionViewItem.h; sourceTree = "<group>"; };
-		10FD4C8326E25C850004A31E /* FTCollectionViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTCollectionViewItem.m; sourceTree = "<group>"; };
+		10FD4C7E26E25BCB0004A31E /* CTCollectionViewItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCollectionViewItemView.h; sourceTree = "<group>"; };
+		10FD4C7F26E25BCB0004A31E /* CTCollectionViewItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCollectionViewItemView.m; sourceTree = "<group>"; };
+		10FD4C8226E25C850004A31E /* CTCollectionViewItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCollectionViewItem.h; sourceTree = "<group>"; };
+		10FD4C8326E25C850004A31E /* CTCollectionViewItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCollectionViewItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 		10FD4C0E26E2417D0004A31E = {
 			isa = PBXGroup;
 			children = (
-				10FD4C1C26E2417D0004A31E /* FTColors */,
+				10FD4C1C26E2417D0004A31E /* ColorThing */,
 				10FD4C1926E2417D0004A31E /* Frameworks */,
 				10FD4C1826E2417D0004A31E /* Products */,
 			);
@@ -68,7 +68,7 @@
 		10FD4C1826E2417D0004A31E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				10FD4C1726E2417D0004A31E /* FTColors.glyphsPalette */,
+				10FD4C1726E2417D0004A31E /* ColorThing.glyphsPalette */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,37 +81,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		10FD4C1C26E2417D0004A31E /* FTColors */ = {
+		10FD4C1C26E2417D0004A31E /* ColorThing */ = {
 			isa = PBXGroup;
 			children = (
-				10FD4C1D26E2417D0004A31E /* FTColors.h */,
-				10FD4C1E26E2417D0004A31E /* FTColors.m */,
-				10FD4C2026E2417D0004A31E /* FTColorsView.xib */,
-				10FD4C8226E25C850004A31E /* FTCollectionViewItem.h */,
-				10FD4C8326E25C850004A31E /* FTCollectionViewItem.m */,
-				10FD4C7E26E25BCB0004A31E /* FTCollectionViewItemView.h */,
-				10FD4C7F26E25BCB0004A31E /* FTCollectionViewItemView.m */,
-				106F260F26E9BCCD0026E696 /* FTPopoverViewController.h */,
-				106F261026E9BCCD0026E696 /* FTPopoverViewController.m */,
+				10FD4C1D26E2417D0004A31E /* ColorThing.h */,
+				10FD4C1E26E2417D0004A31E /* ColorThing.m */,
+				10FD4C2026E2417D0004A31E /* ColorThingView.xib */,
+				10FD4C8226E25C850004A31E /* CTCollectionViewItem.h */,
+				10FD4C8326E25C850004A31E /* CTCollectionViewItem.m */,
+				10FD4C7E26E25BCB0004A31E /* CTCollectionViewItemView.h */,
+				10FD4C7F26E25BCB0004A31E /* CTCollectionViewItemView.m */,
+				106F260F26E9BCCD0026E696 /* CTPopoverViewController.h */,
+				106F261026E9BCCD0026E696 /* CTPopoverViewController.m */,
 				10FD4C7A26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.h */,
 				10FD4C7B26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m */,
-				10DCD22B26E3EF4800E955BC /* FTColorLabel.h */,
-				10DCD22C26E3EF4800E955BC /* FTColorLabel.m */,
+				10DCD22B26E3EF4800E955BC /* CTColorLabel.h */,
+				10DCD22C26E3EF4800E955BC /* CTColorLabel.m */,
 				10FD4C7626E253190004A31E /* Utils.h */,
 				10FD4C7726E253190004A31E /* Utils.m */,
 				10FD4C2326E2417D0004A31E /* GlyphsCore.framework */,
-				10FD4C2526E2417D0004A31E /* FTColors-Prefix.pch */,
+				10FD4C2526E2417D0004A31E /* ColorThing-Prefix.pch */,
 				10FD4C2726E2417D0004A31E /* Info.plist */,
 			);
-			path = FTColors;
+			path = ColorThing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		10FD4C1626E2417D0004A31E /* FTColors */ = {
+		10FD4C1626E2417D0004A31E /* ColorThing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 10FD4C2A26E2417D0004A31E /* Build configuration list for PBXNativeTarget "FTColors" */;
+			buildConfigurationList = 10FD4C2A26E2417D0004A31E /* Build configuration list for PBXNativeTarget "ColorThing" */;
 			buildPhases = (
 				10FD4C1326E2417D0004A31E /* Sources */,
 				10FD4C1426E2417D0004A31E /* Frameworks */,
@@ -121,9 +121,9 @@
 			);
 			dependencies = (
 			);
-			name = FTColors;
-			productName = FTColors;
-			productReference = 10FD4C1726E2417D0004A31E /* FTColors.glyphsPalette */;
+			name = ColorThing;
+			productName = ColorThing;
+			productReference = 10FD4C1726E2417D0004A31E /* ColorThing.glyphsPalette */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -139,7 +139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 10FD4C1226E2417D0004A31E /* Build configuration list for PBXProject "FTColors" */;
+			buildConfigurationList = 10FD4C1226E2417D0004A31E /* Build configuration list for PBXProject "ColorThing" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -152,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				10FD4C1626E2417D0004A31E /* FTColors */,
+				10FD4C1626E2417D0004A31E /* ColorThing */,
 			);
 		};
 /* End PBXProject section */
@@ -162,8 +162,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10FD4C2226E2417D0004A31E /* FTColorsView.xib in Resources */,
-				10FD4C2626E2417D0004A31E /* FTColors-Prefix.pch in Resources */,
+				10FD4C2226E2417D0004A31E /* ColorThingView.xib in Resources */,
+				10FD4C2626E2417D0004A31E /* ColorThing-Prefix.pch in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,12 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10DCD22D26E3EF4800E955BC /* FTColorLabel.m in Sources */,
-				10FD4C8026E25BCB0004A31E /* FTCollectionViewItemView.m in Sources */,
-				10FD4C1F26E2417D0004A31E /* FTColors.m in Sources */,
-				10FD4C8426E25C850004A31E /* FTCollectionViewItem.m in Sources */,
+				10DCD22D26E3EF4800E955BC /* CTColorLabel.m in Sources */,
+				10FD4C8026E25BCB0004A31E /* CTCollectionViewItemView.m in Sources */,
+				10FD4C1F26E2417D0004A31E /* ColorThing.m in Sources */,
+				10FD4C8426E25C850004A31E /* CTCollectionViewItem.m in Sources */,
 				10FD4C7826E253190004A31E /* Utils.m in Sources */,
-				106F261126E9BCCD0026E696 /* FTPopoverViewController.m in Sources */,
+				106F261126E9BCCD0026E696 /* CTPopoverViewController.m in Sources */,
 				10FD4C7C26E25B060004A31E /* LeftAlignedCollectionViewFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,12 +187,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		10FD4C2026E2417D0004A31E /* FTColorsView.xib */ = {
+		10FD4C2026E2417D0004A31E /* ColorThingView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				10FD4C2126E2417D0004A31E /* en */,
 			);
-			name = FTColorsView.xib;
+			name = ColorThingView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -318,10 +318,10 @@
 				DEVELOPMENT_TEAM = "";
 				DSTROOT = "$(USER_LIBRARY_DIR)/Application Support/Glyphs 3/Plugins";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_APPS_DIR)/Glyphs 3.app/Contents/Frameworks\"";
-				GCC_PREFIX_HEADER = "FTColors/FTColors-Prefix.pch";
-				INFOPLIST_FILE = FTColors/Info.plist;
+				GCC_PREFIX_HEADER = "ColorThing/ColorThing-Prefix.pch";
+				INFOPLIST_FILE = ColorThing/Info.plist;
 				INSTALL_PATH = /;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kadimisetty.FTColors;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kadimisetty.ColorThing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = glyphsPalette;
 			};
@@ -334,10 +334,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_APPS_DIR)/Glyphs 3.app/Contents/Frameworks\"";
-				GCC_PREFIX_HEADER = "FTColors/FTColors-Prefix.pch";
-				INFOPLIST_FILE = FTColors/Info.plist;
+				GCC_PREFIX_HEADER = "ColorThing/ColorThing-Prefix.pch";
+				INFOPLIST_FILE = ColorThing/Info.plist;
 				INSTALL_PATH = /;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kadimisetty.FTColors;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kadimisetty.ColorThing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = glyphsPalette;
 			};
@@ -346,7 +346,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10FD4C1226E2417D0004A31E /* Build configuration list for PBXProject "FTColors" */ = {
+		10FD4C1226E2417D0004A31E /* Build configuration list for PBXProject "ColorThing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10FD4C2826E2417D0004A31E /* Debug */,
@@ -355,7 +355,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		10FD4C2A26E2417D0004A31E /* Build configuration list for PBXNativeTarget "FTColors" */ = {
+		10FD4C2A26E2417D0004A31E /* Build configuration list for PBXNativeTarget "ColorThing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10FD4C2B26E2417D0004A31E /* Debug */,
