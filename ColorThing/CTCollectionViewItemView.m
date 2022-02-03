@@ -22,39 +22,24 @@
 }
 
 - (void)setColorLabel:(CTColorLabel *)newValue {
-	// Update backed instance property
+	// Update backed instance property first
 	_colorLabel = newValue;
 
-	// Configure dependant elements
 	NSString* newName =
 		[NSString stringWithFormat:@"%lu",(unsigned long)newValue.allGlyphsCount];
+
+	NSDictionary* buttonTextStyleAttributes =
+		[NSDictionary dictionaryWithObjectsAndKeys:
+		 [Utils colorLabelBodyPreferredFont], NSFontAttributeName,
+		 self.colorLabel.textColor, NSForegroundColorAttributeName,
+		 nil];
 
 	self->nameButton.attributedTitle =
 		[[NSAttributedString alloc]
 		 initWithString: newName
-		 attributes: [self buttonTextStyleAttributesDict]];
+		 attributes: buttonTextStyleAttributes];
 
-	NSColor* newColor = newValue.nSColorValue;
-	self->containerView.layer.backgroundColor = newColor.CGColor;
-}
-
-- (NSDictionary *)buttonTextStyleAttributesDict {
-	ColorLabelIndex colorLabelIndexIntegerValue = self.colorLabel.colorLabelIndexIntegerValue;
-	NSColor* preferredColor = [NSColor blackColor];
-
-	if (
-		(colorLabelIndexIntegerValue == kColorLabelColorCharcoal)
-		|| (colorLabelIndexIntegerValue == kColorLabelColorPurple )
-		|| (colorLabelIndexIntegerValue == kColorLabelColorDarkBlue ))
-	{
-		preferredColor = [NSColor whiteColor];
-	}
-
-	return [NSDictionary dictionaryWithObjectsAndKeys:
-	        [Utils colorLabelBodyPreferredFont], NSFontAttributeName,
-	        preferredColor,
-	        NSForegroundColorAttributeName,
-	        nil];
+	self->containerView.layer.backgroundColor = newValue.backgroundColor.CGColor;
 }
 
 // MARK: LAYOUT

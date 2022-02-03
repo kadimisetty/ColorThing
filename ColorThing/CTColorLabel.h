@@ -9,11 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-//typedef enum : NSInteger {
 typedef NS_ENUM (NSInteger, ColorLabelIndex) {
 	//NONE: # not colored, white (before version 1235, use -1)
 	kColorLabelColorNone = -1,
-
 	kColorLabelColorRed = 0,
 	kColorLabelColorOrange = 1,
 	kColorLabelColorBrown = 2,
@@ -39,9 +37,8 @@ typedef NS_ENUM (NSInteger, ColorLabelIndex) {
 - (NSUInteger)glyphsBeforeActiveGlyphCount;
 - (NSUInteger)glyphsAfterActiveGlyphCount;
 
-- (NSColor*) nSColorValue;
-
-- (NSString*) colorNameStringValue;
+- (NSColor*) textColor;
+- (NSColor*) backgroundColor;
 
 @end
 
