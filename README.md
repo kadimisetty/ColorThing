@@ -19,7 +19,7 @@ access glyphs by their assigned color labels.
 - [ ] Make color label cell size configurable..
 
 
-## Credits and Notes:
+## Credits:
 
 Thanks to Rob Cavazos (of PSY/OPS etc.) for
 pointing out Glyph 3's shortcomings when it
@@ -27,7 +27,7 @@ comes to color label navigation, especially the
 inability to use a keyboard shortcut to swap the
 currently edited glyph with the next/previous
 one assigned to the same color label. While
-this plugin hasn't yet overcome that particular
+this plugin has yet to finish solving that particular
 problem, it alleviates it somewhat by providing
 the ability to keep a better view of the current
 color labels in the sidebar and making it possible
