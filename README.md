@@ -3,7 +3,7 @@
 A Glyphs 3 plugin that makes it easier to view and
 access glyphs by their assigned color labels.
 
-## Features and Roadmap:
+## Features and Roadmap
 
 - [x] Show all color labels in sidebar.
 - [x] Each color label shows the number of assigned glyphs.
@@ -19,17 +19,17 @@ access glyphs by their assigned color labels.
 - [ ] Make color label cell size configurable..
 
 
-## Credits:
+## Credits
 
-Thanks to Rob Cavazos (of PSY/OPS etc.) for
-pointing out Glyph 3's shortcomings when it
-comes to color label navigation, especially the
-inability to use a keyboard shortcut to swap the
-currently edited glyph with the next/previous
+Thanks to Rob Cavazos (PSY/OPS Type Foundry etc.)
+for elucidating a Glyph 3's shortcoming with
+color label navigation, in particular, that there
+isn't a quick keyboard shortcut to rapidly swap
+the currently edited glyph with the next/previous
 one assigned to the same color label. While
-this plugin has yet to finish solving that particular
-problem, it alleviates it somewhat by providing
-the ability to keep a better view of the current
-color labels in the sidebar and making it possible
-to open a new tab with all glyphs assigned to the
-same color label.
+this plugin has yet to finish solving that, it
+alleviates the issue somewhat by providing the
+ability to track color labels and the number of
+assigned glyphs from the sidebar, and also making
+it possible to open a new tab with all glyphs
+assigned to a color label.
